@@ -1,0 +1,38 @@
+// Variables
+$turq: #55C3BD;
+$yellow: #FBED21;
+$purple: #7351A1;
+$orange: #F26D23;
+$lime: #AACC37;
+$coral: #F05364;
+
+$turq-dark: darken(#55C3BD, 20%);
+$yellow-dark: darken(#FBED21, 20%);
+$purple-dark: darken(#7351A1, 20%);
+$orange-dark: darken(#F26D23, 20%);
+$lime-dark: darken(#AACC37, 20%);
+$coral-dark: darken(#F05364, 20%);
+
+$grey-dark: #404040;
+$grey: #808080;
+$grey-lite: #CCC;
+
+$white:#FFF;
+$white-dark:#e5e5e5;
+
+
+//helper classes
+.small {font-size: 12px;}
+.caps {text-transform: uppercase;}
+.turq {color: #55C3BD;}
+.yellow {color: #FBED21;}
+.purple {color: #7351A1;}
+.orange {color: #F26D23;}
+.lime {color: #AACC37;}
+.coral {color: #F05364;}
+.turq-bg {background: #55C3BD;}
+.yellow-bg {background: #FBED21;}
+.purple-bg {background: #7351A1;}
+.orange-bg {background: #F26D23;}
+.lime-bg {background: #AACC37;}
+.coral-bg {background: #F05364;}

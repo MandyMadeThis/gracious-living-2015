@@ -1,0 +1,5 @@
+@mixin base-animation {
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.25s;
+}

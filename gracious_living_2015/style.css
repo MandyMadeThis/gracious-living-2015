@@ -1,0 +1,55 @@
+/*
+Theme Name: gracious_living_2015
+Author: Mandy Made This | Mandy Thomson
+Author URI: http://mandymadethis.com/
+Version: 1.0.0
+Template: x
+*/
+.small { font-size: 12px; }
+
+.caps { text-transform: uppercase; }
+
+.turq { color: #55C3BD; }
+
+.yellow { color: #FBED21; }
+
+.purple { color: #7351A1; }
+
+.orange { color: #F26D23; }
+
+.lime { color: #AACC37; }
+
+.coral { color: #F05364; }
+
+.turq-bg { background: #55C3BD; }
+
+.yellow-bg { background: #FBED21; }
+
+.purple-bg { background: #7351A1; }
+
+.orange-bg { background: #F26D23; }
+
+.lime-bg { background: #AACC37; }
+
+.coral-bg { background: #F05364; }
+
+.x-brand.img { position: relative; top: 10px; }
+.x-brand.img img { width: 200px; }
+
+.x-navbar-wrap .x-container:before, .x-navbar-wrap .x-container:after { display: initial; }
+
+.x-navbar { -webkit-box-shadow: 0 6px 9px -4px rgba(64, 64, 64, 0.4); box-shadow: 0 6px 9px -4px rgba(64, 64, 64, 0.4); }
+
+.x-navbar .desktop .x-nav > li > a { height: 44px; padding-top: 25px; }
+
+.x-btn-navbar, .x-btn-navbar.collapsed { color: #55C3BD; }
+.x-btn-navbar:hover, .x-btn-navbar.collapsed:hover { color: #2e847f; }
+
+.x-header-landmark .entry-title { text-align: right; color: #55C3BD; }
+
+.x-btn, .button, [type="submit"] { -webkit-transition-property: all; transition-property: all; -webkit-transition-timing-function: ease-in-out; transition-timing-function: ease-in-out; -webkit-transition-duration: 0.25s; transition-duration: 0.25s; background-color: #55C3BD; border: none; color: #FFF; cursor: pointer; font-size: 16px; line-height: 2; padding: 0.6em 1.125em; outline: none; text-transform: uppercase; }
+.x-btn:hover, .button:hover, [type="submit"]:hover { background: #2e847f; outline: none; }
+
+.x-btn, .x-btn:hover, .button, .button:hover, [type="submit"], [type="submit"]:hover { text-shadow: none; }
+
+.x-brand.img { position: relative; bottom: -25px; }
