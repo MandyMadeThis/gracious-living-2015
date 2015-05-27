@@ -130,15 +130,7 @@
 // 3. Cite.
 //
 
-.x-blockquote { // 1
-  &.right-text {
-    text-align: right;
-  }
-
-  &.center-text {
-    text-align: center;
-  }
-}
+.x-blockquote {  } // 1
 
 .x-pullquote { // 2
   width: 40%;

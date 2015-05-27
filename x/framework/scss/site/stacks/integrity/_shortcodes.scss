@@ -135,15 +135,7 @@
 // 3. Cite.
 //
 
-.x-blockquote { // 1
-  &.right-text {
-    text-align: right;
-  }
-
-  &.center-text {
-    text-align: center;
-  }
-}
+.x-blockquote {  } // 2
 
 .x-pullquote { // 2
   width: 40%;
@@ -550,7 +542,6 @@ a.x-img-thumbnail:hover {
   margin: 8px 0;
   border: 1px solid $shortcodeBorderColor;
   border: 1px solid $shortcodeBorderColorRgba;
-  border-radius: 3px;
   @include box-shadow(#{$shortcodeBoxShadowOuter});
 }
 

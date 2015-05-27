@@ -440,18 +440,10 @@
     margin-bottom: $baseMargin;
 
     input[type="number"] {
-      width: 3.65em;
+      max-width: 5em;
       margin: 0;
       padding-left: 0.5em;
       padding-right: 0.5em;
-      text-align: center;
-      -moz-appearance: textfield;
-    }
-
-    input[type="number"]::-webkit-inner-spin-button,
-    input[type="number"]::-webkit-outer-spin-button {
-      margin: 0;
-      -webkit-appearance: none;
     }
   }
 

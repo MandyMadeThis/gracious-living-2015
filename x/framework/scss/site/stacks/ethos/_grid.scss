@@ -14,18 +14,6 @@
 // =============================================================================
 
 .x-container {
-  margin: 0 auto;
-  position: relative;
-  @include clearfix();
-
-  &.max {
-    max-width: 1180px;
-  }
-
-  &.width {
-    width: 88%;
-  }
-
   &.main {
     position: relative;
 

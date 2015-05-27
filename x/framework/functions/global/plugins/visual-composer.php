@@ -2066,6 +2066,16 @@ if ( ! function_exists( 'x_visual_composer_map_shortcodes' ) ) {
             'holder'      => 'div'
           ),
           array(
+            'param_name'  => 'advanced_controls',
+            'heading'     => __( 'Advanced Controls', '__x__' ),
+            'description' => __( 'Select to enable advanced controls on your self-hosted video.', '__x__' ),
+            'type'        => 'checkbox',
+            'holder'      => 'div',
+            'value'       => array(
+              '' => 'true'
+            )
+          ),
+          array(
             'param_name'  => 'hide_controls',
             'heading'     => __( 'Hide Controls', '__x__' ),
             'description' => __( 'Select to hide the controls on your self-hosted video.', '__x__' ),
@@ -2945,6 +2955,16 @@ if ( ! function_exists( 'x_visual_composer_map_shortcodes' ) ) {
             'description' => __( 'Include and .oga version of your audio for additional native browser support.', '__x__' ),
             'type'        => 'textfield',
             'holder'      => 'div'
+          ),
+          array(
+            'param_name'  => 'advanced_controls',
+            'heading'     => __( 'Advanced Controls', '__x__' ),
+            'description' => __( 'Select to enable advanced controls on your self-hosted audio.', '__x__' ),
+            'type'        => 'checkbox',
+            'holder'      => 'div',
+            'value'       => array(
+              '' => 'true'
+            )
           ),
           array(
             'param_name'  => 'id',

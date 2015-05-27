@@ -105,7 +105,7 @@ function x_customizer_user_javascript_output() {
   <?php endif; ?>
 
 
-  <?php if ( $x_entry_bg_image_full ) : ?>
+  <?php if ( $x_entry_bg_image_full && is_singular() ) : ?>
 
     <?php
     $page_bg_images_output = '';

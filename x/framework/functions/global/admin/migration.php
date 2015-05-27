@@ -13,6 +13,7 @@
 //   02. Pairing Notice
 //   03. Version Migration Notice
 //   04. Theme Migration
+//   05. Term Splitting Migration (WordPress 4.2 Breaking Change)
 // =============================================================================
 
 // Version Migration
@@ -100,7 +101,7 @@ add_action( 'admin_init', 'x_version_migration' );
 // 2. Plugin is older than what the theme desires it to be
 //
 
-define( 'X_SHORTCODES_CURRENT', '3.0.4' );
+define( 'X_SHORTCODES_CURRENT', '3.0.5' );
 
 function x_pairing_notice() {
 
@@ -133,8 +134,8 @@ function x_version_migration_notice() { // 1
   if ( get_option( 'x_version_migration_notice' ) == true ) { ?>
 
     <div class="updated x-notice dismissible">
-      <a href="<?php echo add_query_arg( array( 'x-dismiss-notice' => true ) ); ?>" class="dismiss"><span class="dashicons dashicons-no"></span></a>
-      <p>Congratulations, you've successfully updated X! Be sure to <a href="//theme.co/x/member/changelog/" target="_blank">check out the release notes and changelog</a> for this latest version to see all that has changed, especially if you're utilizing any additional plugins or have made modifications to your website via a child theme.</p>
+      <a href="<?php echo esc_url( add_query_arg( array( 'x-dismiss-notice' => true ) ) ); ?>" class="dismiss"><span class="dashicons dashicons-no"></span></a>
+      <p>Congratulations, you've successfully updated X! Be sure to <a href="//theme.co/x/changelog/" target="_blank">check out the release notes and changelog</a> for this latest version to see all that has changed, especially if you're utilizing any additional plugins or have made modifications to your website via a child theme.</p>
     </div>
 
   <?php }
@@ -171,7 +172,7 @@ function x_theme_migration( $new_name, $new_theme ) {
   $x_plugins = array();
 
   foreach ( (array) $plugins as $plugin => $headers ) {
-    if ( ! empty( $headers['X Plugin'] ) ) {
+    if ( ! empty( $headers['X Plugin'] ) && $headers['X Plugin'] != 'x-shortcodes' ) {
       $x_plugins[] = $plugin;
     }
   }
@@ -181,3 +182,64 @@ function x_theme_migration( $new_name, $new_theme ) {
 }
 
 add_action( 'switch_theme', 'x_theme_migration', 10, 2 );
+
+
+// Term Splitting Migration (WordPress 4.2 Breaking Change)
+// =============================================================================
+
+function x_split_shared_term_migration( $term_id, $new_term_id, $term_taxonomy_id, $taxonomy ) {
+
+  //
+  // Ethos Filterable Index Categories
+  //
+
+  if ( 'category' == $taxonomy ) {
+
+    $setting = array_map ( 'trim', explode ( ',', get_option('x_ethos_filterable_index_categories') ) );
+
+    foreach ( $setting as $index => $old_term ) {
+      if ( $old_term == (string) $term_id ) {
+        $setting[ $index ] = (string) $new_term_id;
+      }
+    }
+
+    update_option( 'x_ethos_filterable_index_categories', implode(', ', $setting) );
+
+  }
+
+
+  //
+  // Portfolio Categories
+  //
+
+  if ( 'portfolio-category' == $taxonomy ) {
+
+    //Get all post that has _x_portfolio_category_filters and not empty
+    $post_ids = get_posts( array(
+      'fields' => 'ids',
+      'meta_key' =>  '_x_portfolio_category_filters',
+      'meta_value' => '',
+      'meta_compare' => '!='
+    ) );
+
+    //Loop through the post
+    foreach ($post_ids as $post_id) {
+
+      $post_terms = get_post_meta( $post_id, '_x_portfolio_category_filters', true );
+
+      if ( is_array( $post_terms ) ) {
+        foreach ( $post_terms as $index => $old_term ) {
+          if ( $term_id == $old_term) {
+            $post_terms[ $index ] = $new_term_id;
+          }
+        }
+      }
+
+      update_post_meta( $post_id, '_x_portfolio_category_filters', $post_terms );
+
+    }
+  }
+
+}
+
+add_action( 'split_shared_term', 'x_split_shared_term_migration' );

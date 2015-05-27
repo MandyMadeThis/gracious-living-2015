@@ -73,7 +73,12 @@ jQuery(function($) {
     $desktopMenu.on('touchstart click', function(e) { e.stopPropagation(); });
     $('body').on('touchstart click', touchOut);
   } else {
-    $desktopMenu.hoverIntent(hoverIn, hoverOut, desktopTargets);
+    $desktopMenu.hoverIntent({
+      over     : hoverIn,
+      out      : hoverOut,
+      selector : desktopTargets,
+      timeout  : 250
+    });
     $desktopMenu.on('focusin', desktopTargets, hoverIn);
     $desktopMenu.on('focusout', desktopTargets, hoverOut);
   }

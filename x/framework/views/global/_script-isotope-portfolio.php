@@ -29,7 +29,7 @@ $is_rtl = is_rtl();
 
     $container.before('<span id="x-isotope-loading"><span>');
 
-    $(window).load(function(){
+    $(window).load(function() {
       $container.isotope({
         itemSelector   : '.x-iso-container > .hentry',
         resizable      : true,
@@ -43,8 +43,8 @@ $is_rtl = is_rtl();
         }
       });
       $('#x-isotope-loading').stop(true,true).fadeOut(300);
-      $('#x-iso-container .hentry').each(function(i) {
-        $(this).delay(i*150).animate({'opacity':1},300);
+      $('#x-iso-container > .hentry').each(function(i) {
+        $(this).delay(i * 150).animate({'opacity' : 1},500);
       });
     });
 

@@ -62,6 +62,11 @@ if ( ! function_exists( 'x_enqueue_post_meta_scripts' ) ) :
     }
 
     wp_enqueue_script( 'wp-color-picker');
+    wp_enqueue_script( 'x-confirm-js', X_TEMPLATE_URL . '/framework/js/dist/admin/x-confirm.min.js', array( 'jquery' ), X_VERSION, true );
+
+    if ( strpos( $hook, 'x-addons-customizer-manager' ) != false ) {
+      wp_enqueue_script( 'x-customizer-admin-js', X_TEMPLATE_URL . '/framework/js/dist/admin/x-customizer-admin.min.js', array( 'jquery' ), X_VERSION, true );
+    }
 
     if ( $hook == 'widgets.php' ) {
       wp_enqueue_script( 'x-widgets-js', X_TEMPLATE_URL . '/framework/js/dist/admin/x-widgets.min.js', array( 'jquery' ), X_VERSION, true );
@@ -75,19 +80,6 @@ if ( ! function_exists( 'x_enqueue_post_meta_scripts' ) ) :
       wp_enqueue_script( 'jquery-ui-datepicker' );
     }
 
-    if ( $hook == 'post.php' || $hook == 'post-new.php' ) {
-
-      wp_enqueue_script( 'media-upload' );
-      wp_enqueue_script( 'thickbox' );
-
-      echo '<script type="text/javascript" id="x-ajax">
-              var x_ajax = { post_id : 0, nonce : "" };
-              x_ajax.post_id = "' . $post->ID . '";
-              x_ajax.nonce   = "' . wp_create_nonce( 'x-ajax' ) . '";
-            </script>';
-
-    }   
-
   }
   add_action( 'admin_enqueue_scripts', 'x_enqueue_post_meta_scripts' );
 endif;
@@ -96,20 +88,6 @@ endif;
 
 // Enqueue Customizer Scripts
 // =============================================================================
-
-//
-// Admin.
-//
-
-if ( ! function_exists( 'x_enqueue_customizer_admin_scripts' ) ) :
-  function x_enqueue_customizer_admin_scripts() {
-
-    wp_enqueue_script( 'x-customizer-admin-js', X_TEMPLATE_URL . '/framework/js/dist/admin/x-customizer-admin.min.js', array( 'jquery' ), X_VERSION, true );
-
-  }
-  add_action( 'admin_enqueue_scripts', 'x_enqueue_customizer_admin_scripts' );
-endif;
-
 
 //
 // Controls.

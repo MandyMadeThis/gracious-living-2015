@@ -1,81 +1,291 @@
- // Logo in nav
-.x-brand.img {
-   position: relative;
-   top: 10px;
-  img {
-    width: 200px;
+// Setting default colours on pages
+// =============================================================================
+.tribe-theme-child-gracious_living_2015 {
+  .x-topbar,
+  .x-colophon.bottom {
+    background-color: $lime;
+    color: $white;
+    .x-social-global a,
+    .p-info {
+      color: $white;
+      border: none;
+      text-transform: uppercase;
+    }
   }
 }
 
-//removing the display-table from nav, to let logo overflow
-.x-navbar-wrap {
-  .x-container:before, 
-  .x-container:after {
-    display: initial;
+//about pages, sponsors, health + beauty
+.page-id-10,
+.page-id-9250,
+.page-id-1085,
+.page-id-3092,
+.page-id-16,
+.category-health-beauty {
+  .x-topbar,
+  .x-colophon.bottom {
+    background-color: $orange;
   }
 }
 
-//desktop nav
-.x-navbar {
-  box-shadow: 0 6px 9px -4px rgba($grey-dark, 0.4);
-}
-
-// adjust where the underline on nav is (NOT WORKING RIGHT NOW)
-.x-navbar .desktop .x-nav > li > a {
-  height: 44px;
-  padding-top: 25px;
-}
-
-
-//mobile nav 
-.x-btn-navbar, 
-.x-btn-navbar.collapsed {
-  color: $turq;
-  &:hover {
-    color: $turq-dark;
+//blog, media
+.blog,
+.page-id-15{
+  .x-topbar,
+  .x-colophon.bottom {
+    background-color: $purple;
   }
+  
+  .x-main {
+    .entry-featured {
+      position: relative;
+      top: 11px;
+      box-shadow: 0 0 0 8px $black, 0 0 0 17px $white, 0 0 0 19px $yellow;
+    }
+  }
+}
+
+//GL TV
+.page-id-13{
+  .x-topbar,
+  .x-colophon.bottom {
+    background-color: $yellow;
+  }
+  
+  .x-main {
+    .entry-featured {
+      position: relative;
+      top: 11px;
+      box-shadow: 0 0 0 8px $black, 0 0 0 17px $white, 0 0 0 19px $lime;
+    }
+  }
+}
+
+//Gallery
+.page-id-12{
+  .x-topbar,
+  .x-colophon.bottom {
+    background-color: $turq;
+  }
+  
+  .x-main {
+    .entry-featured {
+      position: relative;
+      top: 11px;
+      box-shadow: 0 0 0 8px $black, 0 0 0 17px $white, 0 0 0 19px $coral;
+    }
+  }
+}
+
+// twitter/Instagram footer 
+.tribe-theme-child-gracious_living_2015{
+  .x-colophon.top {
+    background-color: $grey;
+    color: $white;
+  }
+}
+
+// setting the text colour of the lower footer
+.x-colophon.bottom .x-colophon-content {
+  color: $white;
+  a {
+    color: $white;
+  }
+}
+
+
+
+// Headings
+// =============================================================================
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  line-height: 1.1;
+}
+
+h1, .h1 {
+  font-size: 350%;
+}
+
+cite.x-cite {
+  text-align: right;
 }
 
 // Headlines of pages
-.x-header-landmark {
-  .entry-title {
+.h-landmark {
+  &.entry-title {
     text-align: right;
     color: $turq;
+    font-size: 400%;
   }
 }
 
+// Images & captions
+.entry-content {
+  display: block;
+  margin: 27px 0 5px;
 
+  .wp-caption > .wp-caption-text,
+  .wp-caption > .wp-caption-text:last-child,
+  .gallery-item > .wp-caption-text,
+  .gallery-item > .wp-caption-text:last-child {
+    margin: 27px 0 5px;
+  }
+
+  .wp-caption,
+  .gallery-item {
+    border-radius: 0;
+    border: none;
+    padding: 0;
+  }
+
+  img {
+    border-radius: 0;
+    box-shadow: 0 0 0 8px $black, 0 0 0 17px $white, 0 0 0 19px $turq;
+  }
+}
+
+.orange-border {
+  width: 96%;
+  margin-left:auto;
+  margin-right: auto;
+  border-radius: 0;
+  box-shadow: 0 0 0 8px $black, 0 0 0 17px $white, 0 0 0 19px $orange;
+}
+
+.purple-border {
+  width: 96%;
+  margin-left:auto;
+  margin-right: auto;
+  border-radius: 0;
+  box-shadow: 0 0 0 8px $black, 0 0 0 17px $white, 0 0 0 19px $purple;
+}
+
+.yellow-border {
+  width: 96%;
+  margin-left:auto;
+  margin-right: auto;
+  border-radius: 0;
+  box-shadow: 0 0 0 8px $black, 0 0 0 17px $white, 0 0 0 19px $yellow;
+}
+
+.lime-border {
+  width: 96%;
+  margin-left:auto;
+  margin-right: auto;
+  border-radius: 0;
+  box-shadow: 0 0 0 8px $black, 0 0 0 17px $white, 0 0 0 19px $lime;
+}
+
+.coral-border {
+  width: 96%;
+  margin-left:auto;
+  margin-right: auto;
+  border-radius: 0;
+  box-shadow: 0 0 0 8px $black, 0 0 0 17px $white, 0 0 0 19px $coral;
+}
+
+.turq-border {
+  width: 96%;
+  margin-left:auto;
+  margin-right: auto;
+  border-radius: 0;
+  box-shadow: 0 0 0 8px $black, 0 0 0 17px $white, 0 0 0 19px $turq;
+}
 
 // Button styles
-.x-btn, 
-.button, 
+.x-btn,
+.button,
 [type="submit"] {
   @include base-animation;
-  background-color: $turq;
-  border: none;
-  color: $white;
-  cursor: pointer;
   font-size: 16px;
   line-height: 2;
-  padding: 0.6em 1.125em;
   outline: none;
+  padding: 0.6em 1.125em;
+  text-shadow: none;
   text-transform: uppercase;
-  &:hover {
+  border: none;
+
+  &:hover,
+  &:focus,
+  &:active {
     background: $turq-dark;
     outline: none;
+    text-shadow: none;
+    border: none;
   }
+
+  &.button-orange {
+    background: $orange;
+    &:hover,
+    &:focus,
+    &:active {
+      background: $orange-dark;
+    }
+  }
+
+  &.button-yellow {
+    background:$yellow;
+    &:hover,
+    &:focus,
+    &:active {
+      background: $yellow-dark;
+    }
+  }
+
+  &.button-purple {
+    background:$purple;
+    &:hover,
+    &:focus,
+    &:active {
+      background: $purple-dark;
+    }
+  }
+
+  &.button-coral {
+    background:$coral;
+    &:hover,
+    &:focus,
+    &:active {
+      background: $coral-dark;
+    }
+  }
+
+  &.button-lime {
+    background:$lime;
+    &:hover,
+    &:focus,
+    &:active {
+      background: $lime-dark;
+    }
+  }
+
 }
 
-.x-btn, 
-.x-btn:hover, 
-.button, 
-.button:hover, 
-[type="submit"], 
+.x-btn,
+.x-btn:hover,
+.button,
+.button:hover,
+[type="submit"],
 [type="submit"]:hover {
   text-shadow: none;
 }
 
-.x-brand.img {
-  position: relative;
-  bottom: -25px;
+//footer links
+footer.x-colophon.bottom {
+  a,
+  .x-colophon-content a {
+    &:hover {
+      color: $turq;
+    }
+  }
 }

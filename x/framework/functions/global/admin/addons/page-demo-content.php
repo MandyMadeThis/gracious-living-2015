@@ -142,17 +142,22 @@ function x_addons_demo_content_output() {
 
 
         //
-        // Reveal the status message.
+        // Only run setup if confirmed.
         //
 
-        $('#demo-message').fadeIn(250);
+        xAdminConfirm('error', 'Installing demo content will not alter any of your pages or posts, but it will overwrite your Customizer settings. This is not reversible unless you have previously made a backup of your settings. Are you sure you want to proceed?', function() {
 
+          //
+          // 1. Reveal the status message.
+          // 2. Disable button.
+          // 3. Run setup.
+          //
 
-        //
-        // Disable button.
-        //
+          $('#demo-message').fadeIn(250);                            // 1
+          $('#x-addons-demo-content-submit').attr('disabled', true); // 2
+          run_setup();                                               // 3
 
-        $('#x-addons-demo-content-submit').attr('disabled', true);
+        });
 
 
         //
@@ -226,8 +231,6 @@ function x_addons_demo_content_output() {
           });
 
         };
-
-        run_setup();
 
       });
 

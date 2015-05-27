@@ -30,7 +30,7 @@ function x_addons_page_home() { ?>
     <header class="x-addons-home-header">
       <div class="x-addons-home-header-text">
         <h1><?php echo apply_filters( 'x_addons_home_heading', 'Congratulations!' ); ?></h1>
-        <div class="about-text"><?php echo apply_filters( 'x_addons_home_subheading', ( x_is_validated() ) ? '<strong>X is now installed (woo-hoo).</strong> Read on to learn more about various member center resources and other helpful tools. There are many important parts to each update, so be sure to <a href="//theme.co/x/member/changelog/" target="_blank">check out the release notes and changelog</a> for this latest version.' : '<strong>X is now installed (woo-hoo).</strong> Follow the steps below to validate your product, which unlocks automatic updates, additional Extensions, and more.' ); ?></div>
+        <div class="about-text"><?php echo apply_filters( 'x_addons_home_subheading', ( x_is_validated() ) ? '<strong>X is now installed (woo-hoo).</strong> Read on to learn more about various member center resources and other helpful tools. There are many important parts to each update, so be sure to <a href="//theme.co/x/changelog/" target="_blank">check out the release notes and changelog</a> for this latest version.' : '<strong>X is now installed (woo-hoo).</strong> Follow the steps below to validate your product, which unlocks automatic updates, additional Extensions, and more.' ); ?></div>
       </div>
       <div class="x-badge">
         <div class="text">Version</div>

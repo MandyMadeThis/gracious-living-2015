@@ -294,7 +294,6 @@ if ( ! function_exists( 'x_brand_class' ) ) :
     echo $output;
 
   }
-  add_action( 'customize_save', 'x_brand_class' );
 endif;
 
 
@@ -317,7 +316,6 @@ if ( ! function_exists( 'x_masthead_class' ) ) :
     echo $output;
 
   }
-  add_action( 'customize_save', 'x_masthead_class' );
 endif;
 
 
@@ -343,7 +341,6 @@ if ( ! function_exists( 'x_navbar_class' ) ) :
     echo $output;
 
   }
-  add_action( 'customize_save', 'x_navbar_class' );
 endif;
 
 
@@ -387,7 +384,6 @@ if ( ! function_exists( 'x_main_content_class' ) ) :
     echo $output;
 
   }
-  add_action( 'customize_save', 'x_main_content_class' );
 endif;
 
 
@@ -412,7 +408,6 @@ if ( ! function_exists( 'x_sidebar_class' ) ) :
     echo $output;
 
   }
-  add_action( 'customize_save', 'x_sidebar_class' );
 endif;
 
 

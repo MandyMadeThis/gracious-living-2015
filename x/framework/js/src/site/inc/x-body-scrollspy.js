@@ -187,7 +187,7 @@ jQuery(document).ready(function($) {
   //
 
   $(window).load(function() {
-    if ( locHashIndex !== -1 ) {
+    if ( locHashIndex !== -1 && $(locHash).length ) {
       animateOffset(locHash, 1, 'linear');
     }
   });

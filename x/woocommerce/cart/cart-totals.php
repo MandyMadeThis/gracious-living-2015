@@ -3,7 +3,7 @@
 // =============================================================================
 // WOOCOMMERCE/CART/CART-TOTALS.PHP
 // -----------------------------------------------------------------------------
-// @version 2.3.0
+// @version 2.3.6
 // =============================================================================
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
   <table cellspacing="0">
 
     <tr class="cart-subtotal">
-      <th><?php _e( 'Cart Subtotal', '__x__' ); ?></th>
+      <th><?php _e( 'Subtotal', '__x__' ); ?></th>
       <td><?php wc_cart_totals_subtotal_html(); ?></td>
     </tr>
 
@@ -34,6 +34,11 @@ if ( ! defined( 'ABSPATH' ) ) {
       <?php do_action( 'woocommerce_cart_totals_before_shipping' ); ?>
       <?php wc_cart_totals_shipping_html(); ?>
       <?php do_action( 'woocommerce_cart_totals_after_shipping' ); ?>
+    <?php elseif ( WC()->cart->needs_shipping() ) : ?>
+      <tr class="shipping">
+        <th><?php _e( 'Shipping', 'woocommerce' ); ?></th>
+        <td><?php woocommerce_shipping_calculator(); ?></td>
+      </tr>
     <?php endif; ?>
 
     <?php foreach ( WC()->cart->get_fees() as $fee ) : ?>
@@ -62,7 +67,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <?php do_action( 'woocommerce_cart_totals_before_order_total' ); ?>
 
     <tr class="order-total">
-      <th><?php _e( 'Order Total', '__x__' ); ?></th>
+      <th><?php _e( 'Total', '__x__' ); ?></th>
       <td><?php wc_cart_totals_order_total_html(); ?></td>
     </tr>
 

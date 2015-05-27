@@ -22,8 +22,8 @@ ob_start();
 
   <thead>
     <tr class="shop_attributes_thead">
-      <th>Attribute</th>
-      <th>Information</th>
+      <th><?php _e( 'Attribute', '__x__' ) ?></th>
+      <th><?php _e( 'Information', '__x__' ) ?></th>
     </tr>
   </thead>
 

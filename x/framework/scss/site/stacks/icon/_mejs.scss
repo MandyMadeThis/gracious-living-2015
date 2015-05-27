@@ -27,23 +27,39 @@
 // Play/pause buttons.
 //
 
-.mejs-button button {
-  color: darken($white, 15%);
-  @include transition(#{color 0.3s ease});
-
-  &:hover {
-    color: $accentColor;
+.mejs-button {
+  &.mejs-playpause-button {
+    border-right: 1px solid $baseBorderRgba;
   }
+
+  &.mejs-volume-button,
+  &.mejs-fullscreen-button {
+    border-left: 1px solid $baseBorderRgba;
+  }
+
+  button {
+    color: darken($white, 15%);
+    @include transition(#{color 0.3s ease});
+
+    &:hover {
+      color: $accentColor;
+    }
+  }
+}
+
+
+//
+// Time.
+//
+
+.mejs-time {
+  color: darken($white, 15%);
 }
 
 
 //
 // Time rail.
 //
-
-.mejs-time-rail {
-  padding: 10px 10px 0 0;
-}
 
 .mejs-time-total {
   height: 10px;

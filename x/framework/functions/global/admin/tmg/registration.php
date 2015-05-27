@@ -46,7 +46,7 @@ if ( ! function_exists( 'x_register_theme_plugins' ) ) :
         'slug'               => 'revslider',
         'source'             => X_TEMPLATE_URL . '/framework/plugins/revslider.zip',
         'required'           => false,
-        'version'            => '4.6.5',
+        'version'            => '4.6.9',
         'force_activation'   => false,
         'force_deactivation' => false,
         'external_url'       => '',

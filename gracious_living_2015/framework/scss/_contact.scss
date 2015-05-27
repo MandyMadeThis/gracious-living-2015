@@ -1,0 +1,36 @@
+.page-id-17 {
+  .x-navbar .desktop .x-nav > .current-menu-item > a {
+    box-shadow: 0 2px 0 0 $purple;
+  }
+  .h-landmark.entry-title {
+      color: $purple;
+    }
+    .entry-content {
+      img {
+        box-shadow: 
+          0 0 0 8px $black,
+          0 0 0 17px $white,
+          0 0 0 19px $purple;
+      }
+    }
+
+    // form styling
+    select,
+    textarea,
+    input[type="text"],
+    input[type="email"],
+    input[type="search"],
+    .uneditable-input {
+      color: $purple;
+    }
+
+    [type="submit"] {
+      background-color: $purple;
+      display: block;
+      width: 100%;
+      &:hover {
+        background: $purple-dark;
+        color: $white;
+      }
+    }
+}

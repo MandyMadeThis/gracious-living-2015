@@ -13,26 +13,105 @@ $orange-dark: darken(#F26D23, 20%);
 $lime-dark: darken(#AACC37, 20%);
 $coral-dark: darken(#F05364, 20%);
 
-$grey-dark: #404040;
 $grey: #808080;
 $grey-lite: #CCC;
+$grey-dark: #404040;
+
+$black: #1a1a1a;
 
 $white:#FFF;
 $white-dark:#e5e5e5;
 
 
 //helper classes
-.small {font-size: 12px;}
-.caps {text-transform: uppercase;}
-.turq {color: #55C3BD;}
-.yellow {color: #FBED21;}
-.purple {color: #7351A1;}
-.orange {color: #F26D23;}
-.lime {color: #AACC37;}
-.coral {color: #F05364;}
-.turq-bg {background: #55C3BD;}
-.yellow-bg {background: #FBED21;}
-.purple-bg {background: #7351A1;}
-.orange-bg {background: #F26D23;}
-.lime-bg {background: #AACC37;}
-.coral-bg {background: #F05364;}
+.small {font-size: 12px !important;}
+.caps {text-transform: uppercase !important;}
+.turq {color: #55C3BD !important;}
+.yellow {color: #FBED21 !important;}
+.purple {color: #7351A1 !important;}
+.orange {color: #F26D23 !important;}
+.lime {color: #AACC37 !important;}
+.coral {color: #F05364 !important;}
+.turq-bg {background: #55C3BD !important;}
+.yellow-bg {background: #FBED21 !important;}
+.purple-bg {background: #7351A1 !important;}
+.orange-bg {background: #F26D23 !important;}
+.lime-bg {background: #AACC37 !important;}
+.coral-bg {background: #F05364 !important;}
+
+// Breakpoints
+// =============================================================================
+$breakSmall:          480px  !default;
+$breakMedium:         767px  !default;
+$breakMediumLarge:    979px  !default; // (+1 = default desktop)
+$breakLarge:          1200px !default;
+
+@mixin break($point) {
+
+  @if $point == baby-bear {
+    @media (max-width: $breakSmall) {
+      @content;
+    }
+  }
+
+  @else if $point == middle-bear {
+    @media (max-width: $breakMedium) {
+      @content;
+    }
+  }
+
+  @else if $point == old-bear {
+    @media (min-width: $breakMedium + 1) and (max-width: $breakMediumLarge) {
+      @content;
+    }
+  }
+
+  @else if $point == cubs {
+    @media (max-width: $breakMediumLarge) {
+      @content;
+    }
+  }
+
+  @else if $point == mama-bear {
+    @media (min-width: $breakMediumLarge + 1) {
+      @content;
+    }
+  }
+
+  @else if $point == papa-bear {
+    @media (min-width: $breakLarge) {
+      @content;
+    }
+  }
+
+}
+
+// Breakpoint: baby-bear (Up to Landscape Phone)
+// @include break(baby-bear) {
+
+// }
+
+// Breakpoint: cubs (Tablets and Below)
+// @include break(cubs) {
+
+// }
+
+// Breakpoint: middle-bear (Up to Portrait Tablet)
+// @include break(middle-bear) {
+
+// }
+
+// Breakpoint: mama-bear (Default Desktop)
+// @include break(mama-bear) {
+
+// }
+
+// Breakpoint: old-bear (Portrait Tablet to Default Desktop)
+// @include break(old-bear) {
+
+// }
+
+// Breakpoint: papa-bear (Large Desktop and Up)
+// @include break(papa-bear) {
+
+// }

@@ -7,17 +7,37 @@
 // =============================================================================
 // TABLE OF CONTENTS
 // -----------------------------------------------------------------------------
-//   01. Gaps
-//   02. Clear
-//   03. Maps
-//   04. Code
-//   05. Block Grid
-//   06. Video
-//   07. Responsive Slider
-//   08. Audio
-//   09. Search
-//   10. Counter
+//   01. Container
+//   02. Gaps
+//   03. Clear
+//   04. Maps
+//   05. Code
+//   06. Block Grid
+//   07. Video
+//   08. Responsive Slider
+//   09. Audio
+//   10. Search
+//   11. Counter
 // =============================================================================
+
+// Container
+// =============================================================================
+
+.x-container {
+  margin: 0 auto;
+  position: relative;
+  @include clearfix();
+
+  &.max {
+    max-width: 1200px;
+  }
+
+  &.width {
+    width: 88%;
+  }
+}
+
+
 
 // Gaps
 // =============================================================================
@@ -90,6 +110,7 @@
   & > li {
     display: block;
     height: auto;
+    margin: 0;
     float: left;
   }
 
@@ -146,6 +167,7 @@
       left: 0;
       width: 100%;
       height: 100%;
+      margin: 0;
     }
   }
 }
@@ -169,6 +191,7 @@
 // =============================================================================
 
 .x-audio {
+  height: $mejsHeight;
   margin-bottom: $baseMargin;
 }
 
