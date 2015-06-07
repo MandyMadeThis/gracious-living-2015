@@ -1,0 +1,29 @@
+.home {
+  .h-landmark.entry-title{display: none;}
+
+  .x-container>.offset {
+    margin: 0 auto;
+  }
+
+  .x-flexslider-shortcode-container {margin-bottom: 0;}
+}
+
+// Removing things from media pages
+// =============================================================================
+.portfolio-category-media {
+  .p-meta {display: none;}
+}
+
+.portfolio-category-media {
+  .entry-content img {
+    box-shadow: none;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+
+
+
+
+

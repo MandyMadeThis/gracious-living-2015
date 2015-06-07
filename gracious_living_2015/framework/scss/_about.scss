@@ -1,7 +1,7 @@
 // testimonials
 .page-id-1085 {
-  cite.x-cite {
-    color: $lime;
+  .x-cite {
+    color: $orange;
   }
 }
 
@@ -11,5 +11,17 @@
   .x-block-grid.two-up {
     h2 {color: $turq;}
     i {background: $turq;}
+  }
+}
+
+#about-callout {
+  .x-btn {
+    display: block;
+    background: $orange;
+    &:hover,
+    &:focus,
+    &:active {
+      background: $orange-dark;
+    }
   }
 }

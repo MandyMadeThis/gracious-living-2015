@@ -14,7 +14,8 @@
   }
 }
 
-//about pages, sponsors, health + beauty
+// ORANGE HEADER/ TURQ ACCENTS 
+// about pages, sponsors, health + beauty 
 .page-id-10,
 .page-id-9250,
 .page-id-1085,
@@ -92,8 +93,6 @@
   }
 }
 
-
-
 // Headings
 // =============================================================================
 
@@ -130,6 +129,7 @@ cite.x-cite {
 }
 
 // Images & captions
+// =============================================================================
 .entry-content {
   display: block;
   margin: 27px 0 5px;
@@ -151,9 +151,21 @@ cite.x-cite {
   img {
     border-radius: 0;
     box-shadow: 0 0 0 8px $black, 0 0 0 17px $white, 0 0 0 19px $turq;
+    margin-top: 25px;
+    margin-bottom: 25px;  
   }
 }
 
+.x-slide  {
+   img {
+    box-shadow: none;
+    margin-top: 0;
+    margin-bottom: 0;
+  } 
+}
+
+// borders
+// =============================================================================
 .orange-border {
   width: 96%;
   margin-left:auto;
@@ -203,6 +215,7 @@ cite.x-cite {
 }
 
 // Button styles
+// =============================================================================
 .x-btn,
 .button,
 [type="submit"] {
@@ -289,3 +302,33 @@ footer.x-colophon.bottom {
     }
   }
 }
+
+// sidebar
+// =============================================================================
+.x-sidebar.right {
+  .h-widget{
+      border: none;
+      color: $turq;
+      font-size: 1.4em;
+      // margin-bottom: 0;
+      // padding-bottom: 0;
+      .x-img {margin-bottom: 0;}
+    }
+}
+
+// single portfolio pages
+// =============================================================================
+.single-x-portfolio {  
+
+  .entry-wrap {
+    float: none;
+    width: 100%;
+  }
+
+  .entry-featured {
+    float: none;
+    padding-right: 0;
+    width: 100%;
+  }
+}
+

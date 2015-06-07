@@ -21,16 +21,4 @@ function cc_mime_types( $mimes ){
 
 add_filter( 'upload_mimes', 'cc_mime_types' );
 
-/* Custom Tiny MCE WYSIWYG */
-
-// READ MORE: http://wesbos.com/custom-wordpress-tinymce-wysiwyg-classes/
-function make_mce_awesome( $init ) {
-$init['theme_advanced_blockformats'] = 'h1,h2,h3,h4,p,hr';
-$init['theme_advanced_disable'] = 'underline,spellchecker,wp_help';
-$init['theme_advanced_text_colors'] = '55C3BD,FBED21,7351A1,F26D23,AACC37,F05364,CCC,808080,404040';
-$init['theme_advanced_buttons2_add'] = 'styleselect,hr';
-$init['theme_advanced_styles'] = "Big Grey Title=bigGreyTitle,Grey Image Border=greyImageBorder";
-return $init;
-}
-
-add_filter('tiny_mce_before_init', 'make_mce_awesome');
+add_filter('widget_text', 'do_shortcode');

@@ -1233,6 +1233,9 @@ function x_customizer_options_register( $wp_customize ) {
       $x['set'][] = array( 'x_social_tumblr', '', 'refresh' );
       $x['con'][] = array( 'x_social_tumblr', 'text', __( 'Tumblr Profile URL', '__x__' ), 'x_customizer_section_social' );
 
+      $x['set'][] = array( 'x_social_whatsapp', '', 'refresh' );
+      $x['con'][] = array( 'x_social_whatsapp', 'text', __( 'Whatsapp Profile URL', '__x__' ), 'x_customizer_section_social' );
+
       $x['set'][] = array( 'x_social_soundcloud', '', 'refresh' );
       $x['con'][] = array( 'x_social_soundcloud', 'text', __( 'SoundCloud Profile URL', '__x__' ), 'x_customizer_section_social' );
 
@@ -1641,6 +1644,7 @@ function x_customizer_options_list() {
     'x_social_twitter',
     'x_social_googleplus',
     'x_social_linkedin',
+    'x_social_xing',
     'x_social_foursquare',
     'x_social_youtube',
     'x_social_vimeo',
@@ -1650,7 +1654,11 @@ function x_customizer_options_list() {
     'x_social_flickr',
     'x_social_behance',
     'x_social_tumblr',
+    'x_social_whatsapp',
+    'x_social_soundcloud',
     'x_social_rss',
+    'x_social_open_graph',
+    'x_social_fallback_image',
     'x_icon_favicon',
     'x_icon_touch',
     'x_icon_tile',
