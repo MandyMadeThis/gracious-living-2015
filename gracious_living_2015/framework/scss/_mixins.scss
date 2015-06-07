@@ -3,3 +3,11 @@
   transition-timing-function: ease-in-out;
   transition-duration: 0.25s;
 }
+
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}

@@ -1,41 +1,139 @@
-// Setting default colours on pages
-// =============================================================================
-.tribe-theme-child-gracious_living_2015 {
-  .x-topbar,
-  .x-colophon.bottom {
-    background-color: $lime;
+// setting the text colour of the lower footer
+.x-colophon.bottom .x-colophon-content {
+  color: $white;
+
+  a {
     color: $white;
-    .x-social-global a,
-    .p-info {
-      color: $white;
-      border: none;
-      text-transform: uppercase;
-    }
   }
 }
 
-// ORANGE HEADER/ TURQ ACCENTS 
-// about pages, sponsors, health + beauty 
-.page-id-10,
-.page-id-9250,
-.page-id-1085,
-.page-id-3092,
-.page-id-16,
-.category-health-beauty {
+// SETTING DEFAULT COLOURS ON PAGES
+// ============================================================================
+
+// HOME & CONTACT = LIME HEAD + TURQ ACCENTS
+.home,
+.page-id-17 {
   .x-topbar,
+  .sign-up-form-wrapper,
+  .x-colophon.bottom {
+    background-color: $lime;
+  }
+
+  .x-btn, 
+  .button, 
+  [type="submit"] {
+    background: $turq;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background: $turq-dark;
+      outline: none;
+      text-shadow: none;
+      border: none;
+    }
+  }
+
+  .h-landmark.entry-title {
+    color: $turq;
+  }
+
+  .entry-content img {
+    width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0;
+    box-shadow: 0 0 0 8px $black, 0 0 0 17px $white, 0 0 0 19px $turq;
+  }
+
+  // Contact form styling
+  #wpcf7-f4396-p17-o1 {
+      select,
+      textarea,
+      input[type="text"],
+      input[type="email"],
+      input[type="search"],
+      .uneditable-input {
+        color: $turq;
+      }
+
+      select,
+      textarea,
+      input[type="text"],
+      input[type="email"],
+      input[type="search"] {
+        border: 3px solid $turq;
+      }
+
+      .wpcf7-submit {
+        width: 100%;
+      }
+    }
+
+    img.ajax-loader {
+      height: 0;
+    }
+  }
+  
+// ABOUT PAGES: ORANGE HEADER/ TURQ ACCENTS 
+.page-id-10,
+.page-id-16,
+.page-id-1085,
+.page-id-12,
+.page-id-15, 
+.page-id-3092 {
+
+  .x-topbar,
+  .sign-up-form-wrapper,
   .x-colophon.bottom {
     background-color: $orange;
   }
+
+  .x-btn, 
+  .button, 
+  [type="submit"] {
+    background: $turq;
+    
+    &:hover,
+    &:focus,
+    &:active {
+      background: $turq-dark;
+      outline: none;
+      text-shadow: none;
+      border: none;
+    }
+  }
+
+  .h-landmark.entry-title {
+    color: $turq;
+  }
+
+  .entry-content img {
+    width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0;
+    box-shadow: 0 0 0 8px $black, 0 0 0 17px $white, 0 0 0 19px $turq;
+  }
 }
 
-//blog, media
+
+// BLOG & BLOG CAT PAGES: PURPLE HEAD, YELLOW ACCENTS
 .blog,
-.page-id-15{
+.single-post,
+.category-nutrition,
+.category-inspiration,
+.category-yoga,
+.category-health-beauty,
+.category-my-adventures,
+.category-news {
+
   .x-topbar,
+  .sign-up-form-wrapper,
   .x-colophon.bottom {
     background-color: $purple;
   }
-  
+
   .x-main {
     .entry-featured {
       position: relative;
@@ -43,52 +141,224 @@
       box-shadow: 0 0 0 8px $black, 0 0 0 17px $white, 0 0 0 19px $yellow;
     }
   }
-}
 
-//GL TV
-.page-id-13{
-  .x-topbar,
-  .x-colophon.bottom {
-    background-color: $yellow;
-  }
-  
-  .x-main {
-    .entry-featured {
-      position: relative;
-      top: 11px;
-      box-shadow: 0 0 0 8px $black, 0 0 0 17px $white, 0 0 0 19px $lime;
+  .x-btn, 
+  .button, 
+  [type="submit"] {
+    background: $yellow;
+    color: $grey-dark;
+    
+    &:hover,
+    &:focus,
+    &:active {
+      background: $yellow-dark;
+      color: $grey-dark;
+      outline: none;
+      text-shadow: none;
+      border: none;
     }
   }
+
+  .h-landmark.entry-title {
+    color: $yellow-dark;
+  }
+
+  .entry-content img {
+    width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0;
+    box-shadow: 0 0 0 8px $black, 0 0 0 17px $white, 0 0 0 19px $yellow;
+  }
 }
 
-//Gallery
-.page-id-12{
+
+// RECIPES: CORAL HEAD, LIME ACCENTS
+.page-id-5197,
+.category-juice-and-smoothie-recipes,
+.category-dressing-and-sauce-recipes,
+.category-dessert-recipes,
+.category-salad-recipes,
+.category-soup-recipes,
+.category-breakfast-recipes {
+
   .x-topbar,
+  .sign-up-form-wrapper,
+  .x-colophon.bottom {
+    background-color: $coral;
+  }
+
+  .x-btn, 
+  .button, 
+  [type="submit"] {
+    background: $lime;
+    
+    &:hover,
+    &:focus,
+    &:active {
+      background: $lime-dark;
+      outline: none;
+      text-shadow: none;
+      border: none;
+    }
+  }
+
+  .h-landmark.entry-title {
+    color: $lime;
+  }
+
+  .entry-content img {
+    width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0;
+    box-shadow: 0 0 0 8px $black, 0 0 0 17px $white, 0 0 0 19px $lime;
+  }
+
+}
+
+// EVENTS + EVENT PAGES: TURQ HEAD ORANGE ACCENTS
+.page-id-3589,
+.single-tribe_events {
+
+  .x-topbar,
+  .sign-up-form-wrapper,
   .x-colophon.bottom {
     background-color: $turq;
   }
-  
+
+  .x-btn, 
+  .button, 
+  [type="submit"] {
+    background: $orange;
+    
+    &:hover,
+    &:focus,
+    &:active {
+      background: $orange-dark;
+      outline: none;
+      text-shadow: none;
+      border: none;
+    }
+  }
+
+  .h-landmark.entry-title,
+  .tribe-events-single-event-title {
+    color: $orange;
+  }
+
+  .entry-content img {
+    width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0;
+    box-shadow: 0 0 0 8px $black, 0 0 0 17px $white, 0 0 0 19px $orange;
+  }
+}
+
+
+// OFFERINGS + OFFERINGS PAGES: YELLOW HEAD, PURPLE ACCENTS
+.page-id-9503,
+.page-id-9250, 
+.page-id-4986,
+.page-id-4388,
+.page-id-4386 {
+
+  .x-colophon.bottom .x-colophon-content {
+    color: $grey-dark;
+
+    a {color: $grey-dark;}
+  }
+
+  .x-topbar,
+  .sign-up-form-wrapper,
+  .x-colophon.bottom {
+    background-color: $yellow;
+
+    .x-social-global a,
+    .p-info,
+    .inner-sign-up-wrapper h4 {
+      color: $grey-dark;
+    }
+  }
+
   .x-main {
     .entry-featured {
       position: relative;
       top: 11px;
-      box-shadow: 0 0 0 8px $black, 0 0 0 17px $white, 0 0 0 19px $coral;
+      box-shadow: 0 0 0 8px $black, 0 0 0 17px $white, 0 0 0 19px $purple;
     }
   }
-}
 
-// twitter/Instagram footer 
-.tribe-theme-child-gracious_living_2015{
-  .x-colophon.top {
-    background-color: $grey;
-    color: $white;
+  .x-btn, 
+  .button, 
+  [type="submit"] {
+    background: $purple;
+    
+    &:hover,
+    &:focus,
+    &:active {
+      background: $purple-dark;
+      outline: none;
+      text-shadow: none;
+      border: none;
+    }
+  }
+
+  .h-landmark.entry-title {
+    color: $purple;
+  }
+
+  .entry-content img {
+    width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0;
+    box-shadow: 0 0 0 8px $black, 0 0 0 17px $white, 0 0 0 19px $purple;
   }
 }
 
-// setting the text colour of the lower footer
-.x-colophon.bottom .x-colophon-content {
-  color: $white;
-  a {
+// GL TV: LIME HEAD, CORAL ACCENTS
+.page-id-13 {
+
+  .x-topbar,
+  .sign-up-form-wrapper,
+  .x-colophon.bottom {
+    background-color: $lime;
+  }
+
+  .x-btn, 
+  .button, 
+  [type="submit"] {
+    background: $coral;
+    
+    &:hover,
+    &:focus,
+    &:active {
+      background: $coral-dark;
+      outline: none;
+      text-shadow: none;
+      border: none;
+    }
+  }
+
+  .h-landmark.entry-title {
+    color: $coral;
+  }
+
+  .entry-content img {
+    width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0;
+    box-shadow: 0 0 0 8px $black, 0 0 0 17px $white, 0 0 0 19px $coral;
+  }
+}
+
+// twitter/Instagram footer
+.tribe-theme-child-gracious_living_2015 {
+  .x-colophon.top {
+    background-color: $grey;
     color: $white;
   }
 }
@@ -121,9 +391,10 @@ cite.x-cite {
 
 // Headlines of pages
 .h-landmark {
+  margin-bottom: 0;
+
   &.entry-title {
     text-align: right;
-    color: $turq;
     font-size: 400%;
   }
 }
@@ -152,23 +423,23 @@ cite.x-cite {
     border-radius: 0;
     box-shadow: 0 0 0 8px $black, 0 0 0 17px $white, 0 0 0 19px $turq;
     margin-top: 25px;
-    margin-bottom: 25px;  
+    margin-bottom: 25px;
   }
 }
 
-.x-slide  {
-   img {
+.x-slide {
+  img {
     box-shadow: none;
     margin-top: 0;
     margin-bottom: 0;
-  } 
+  }
 }
 
 // borders
 // =============================================================================
 .orange-border {
   width: 96%;
-  margin-left:auto;
+  margin-left: auto;
   margin-right: auto;
   border-radius: 0;
   box-shadow: 0 0 0 8px $black, 0 0 0 17px $white, 0 0 0 19px $orange;
@@ -176,7 +447,7 @@ cite.x-cite {
 
 .purple-border {
   width: 96%;
-  margin-left:auto;
+  margin-left: auto;
   margin-right: auto;
   border-radius: 0;
   box-shadow: 0 0 0 8px $black, 0 0 0 17px $white, 0 0 0 19px $purple;
@@ -184,7 +455,7 @@ cite.x-cite {
 
 .yellow-border {
   width: 96%;
-  margin-left:auto;
+  margin-left: auto;
   margin-right: auto;
   border-radius: 0;
   box-shadow: 0 0 0 8px $black, 0 0 0 17px $white, 0 0 0 19px $yellow;
@@ -192,7 +463,7 @@ cite.x-cite {
 
 .lime-border {
   width: 96%;
-  margin-left:auto;
+  margin-left: auto;
   margin-right: auto;
   border-radius: 0;
   box-shadow: 0 0 0 8px $black, 0 0 0 17px $white, 0 0 0 19px $lime;
@@ -200,7 +471,7 @@ cite.x-cite {
 
 .coral-border {
   width: 96%;
-  margin-left:auto;
+  margin-left: auto;
   margin-right: auto;
   border-radius: 0;
   box-shadow: 0 0 0 8px $black, 0 0 0 17px $white, 0 0 0 19px $coral;
@@ -208,7 +479,7 @@ cite.x-cite {
 
 .turq-border {
   width: 96%;
-  margin-left:auto;
+  margin-left: auto;
   margin-right: auto;
   border-radius: 0;
   box-shadow: 0 0 0 8px $black, 0 0 0 17px $white, 0 0 0 19px $turq;
@@ -239,49 +510,85 @@ cite.x-cite {
 
   &.button-orange {
     background: $orange;
+
+    .x-section & {background: $orange;}
+
     &:hover,
     &:focus,
     &:active {
       background: $orange-dark;
+
+      .x-section & {background: $orange-dark}
     }
   }
 
   &.button-yellow {
-    background:$yellow;
+    background: $yellow;
+    color: $grey-dark;
+    text-shadow: none;
+
+    .x-section & {
+      background: $yellow; 
+      color: $grey-dark;
+      text-shadow: none;
+    }
+
     &:hover,
     &:focus,
     &:active {
       background: $yellow-dark;
-    }
+      color: $grey-dark;
+      text-shadow: none;
+
+      .x-section & {
+        background: $yellow-dark; 
+        color: $grey-dark;
+        text-shadow: none;
+      }
+    }   
   }
 
   &.button-purple {
-    background:$purple;
+    background: $purple;
+
+    .x-section & {background: $purple;}
+
     &:hover,
     &:focus,
     &:active {
       background: $purple-dark;
+
+      .x-section & {background: $purple-dark}
     }
   }
 
   &.button-coral {
-    background:$coral;
+    background: $coral;
+
+    .x-section & {background: $coral;}
+  
     &:hover,
     &:focus,
     &:active {
       background: $coral-dark;
+
+      .x-section & {background: $coral-dark}
     }
   }
 
   &.button-lime {
-    background:$lime;
+    background: $lime;
+
+    .x-section & {background: $lime;}
+
     &:hover,
     &:focus,
     &:active {
       background: $lime-dark;
+
+      .x-section & {background: $lime-dark}
     }
   }
-
 }
 
 .x-btn,
@@ -305,21 +612,20 @@ footer.x-colophon.bottom {
 
 // sidebar
 // =============================================================================
-.x-sidebar.right {
-  .h-widget{
-      border: none;
-      color: $turq;
-      font-size: 1.4em;
-      // margin-bottom: 0;
-      // padding-bottom: 0;
-      .x-img {margin-bottom: 0;}
-    }
-}
+// .x-sidebar.right {
+//   .h-widget{
+//       border: none;
+//       color: $turq;
+//       font-size: 1.4em;
+//       // margin-bottom: 0;
+//       // padding-bottom: 0;
+//       .x-img {margin-bottom: 0;}
+//     }
+// }
 
 // single portfolio pages
 // =============================================================================
-.single-x-portfolio {  
-
+.single-x-portfolio {
   .entry-wrap {
     float: none;
     width: 100%;
@@ -331,4 +637,3 @@ footer.x-colophon.bottom {
     width: 100%;
   }
 }
-

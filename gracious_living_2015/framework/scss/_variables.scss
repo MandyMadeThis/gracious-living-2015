@@ -7,7 +7,7 @@ $lime: #AACC37;
 $coral: #F05364;
 
 $turq-dark: darken(#55C3BD, 20%);
-$yellow-dark: darken(#FBED21, 20%);
+$yellow-dark: darken(#FBED21, 10%);
 $purple-dark: darken(#7351A1, 20%);
 $orange-dark: darken(#F26D23, 20%);
 $lime-dark: darken(#AACC37, 20%);
@@ -85,33 +85,41 @@ $breakLarge:          1200px !default;
   }
 
 }
+// Breakpoint: papa-bear (Large Desktop and Up)
+@include break(papa-bear) {
 
-// Breakpoint: baby-bear (Up to Landscape Phone)
-// @include break(baby-bear) {
-
-// }
-
-// Breakpoint: cubs (Tablets and Below)
-// @include break(cubs) {
-
-// }
-
-// Breakpoint: middle-bear (Up to Portrait Tablet)
-// @include break(middle-bear) {
-
-// }
-
-// Breakpoint: mama-bear (Default Desktop)
-// @include break(mama-bear) {
-
-// }
+}
 
 // Breakpoint: old-bear (Portrait Tablet to Default Desktop)
-// @include break(old-bear) {
+@include break(old-bear) {
 
-// }
+}
 
-// Breakpoint: papa-bear (Large Desktop and Up)
-// @include break(papa-bear) {
+// Breakpoint: mama-bear (Default Desktop)
+@include break(mama-bear) {
 
-// }
+}
+
+// Breakpoint: middle-bear (Up to Portrait Tablet)
+@include break(middle-bear) {
+
+}
+
+// Breakpoint: cubs (Tablets and Below)
+@include break(cubs) {
+
+}
+
+// Breakpoint: baby-bear (Up to Landscape Phone)
+@include break(baby-bear) {
+
+}
+
+
+
+
+
+
+
+
+

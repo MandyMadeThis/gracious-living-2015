@@ -9,7 +9,6 @@
 ?>
 
 <?php get_header(); ?>
-<?php putRevSlider("home","homepage") ?>
   <div class="x-container max width main">
     <div class="offset cf">
       <div class="<?php x_main_content_class(); ?>" role="main">

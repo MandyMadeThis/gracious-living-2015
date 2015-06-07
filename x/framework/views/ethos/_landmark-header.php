@@ -63,7 +63,7 @@ $disable_page_title = get_post_meta( get_the_ID(), '_x_entry_disable_page_title'
       ?>
 
       <header class="x-header-landmark x-container max width">
-        <h1 class="h-landmark"><span><?php echo $title; ?></span></h1>
+        <h1 class="h-landmark entry-title"><span><?php echo $title; ?></span></h1>
       </header>
 
     <?php elseif ( is_tag() || x_is_portfolio_tag() || x_is_product_tag() ) : ?>

@@ -8,9 +8,8 @@ Template: x
 
 @import "variables";
 @import "mixins";
-@import "nav";
-@import "home-page";
+@import "header";
 @import "global-overrides";
+@import "home-page";
 @import "about";
 @import "sponsors";
-@import "contact";

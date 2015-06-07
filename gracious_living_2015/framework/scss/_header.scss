@@ -1,0 +1,248 @@
+// fixing the main nav height
+body.x-navbar-fixed-top-active.tribe-theme-child-gracious_living_2015 .x-navbar-wrap {
+  height: 28px;
+}
+
+// Logo in nav
+.x-brand.img {
+  position: relative;
+  bottom: -5px;
+
+  img {
+    width: 210px;
+  }
+}
+
+//removing the display-table from nav, to let logo overflow
+.x-navbar-wrap {
+  .x-container:before,
+  .x-container:after {
+    display: initial;
+  }
+}
+
+// setting the nav to be full width
+.x-navbar-wrap {
+  .x-container.max.width {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 1.15em;
+  }
+}
+
+// TOP NAVBAR OVERRIDES
+.tribe-theme-child-gracious_living_2015 {
+  .x-topbar,
+  .sign-up-form-wrapper,
+  .x-colophon.bottom {
+    background-color: $lime;
+    color: $white;
+
+    .x-social-global a,
+    .p-info {
+      color: $white;
+      border: none;
+      text-transform: uppercase;
+    }
+  }
+}
+
+//adjusting the width of topbar content
+.x-topbar-inner.x-container.max.width{
+  // Breakpoint: cubs (Tablets and Below)
+  @include break(cubs) {
+    width: 94%;
+  }
+
+  // Breakpoint: baby-bear (Up to Landscape Phone)
+  @include break(baby-bear) {
+    width: 100%;
+  }
+}
+
+//adding space between dropdown menu items
+.desktop .sub-menu a {
+  line-height: 3.5;
+}
+  
+// adjust where the underline on nav is (NOT WORKING RIGHT NOW)
+// .x-navbar .desktop .x-nav > li > a {
+//   height: 44px;
+//   padding-top: 25px;
+// }
+
+//mobile nav
+.x-btn-navbar,
+.x-btn-navbar.collapsed {
+  color: $turq;
+
+  &:hover {
+    color: $turq-dark;
+  }
+}
+
+
+
+// NAV LINK COLOURS
+// =============================================================================
+
+// about menu
+#menu-item-25 {
+  a:hover,
+  ul.sub-menu a:hover,
+  &.current-menu-item > a, 
+  .current-menu-item  {
+    box-shadow: 0 4px 0 0 $turq;
+  }
+  > a span:after {
+    color: $turq;
+  }
+}
+
+//blog menu
+#menu-item-22 {
+  > a:hover,
+  ul.sub-menu a:hover,
+  &.current-menu-item > a,
+  .current-menu-item   {
+    box-shadow: 0 4px 0 0 $yellow;
+  }
+
+  > a span:after {
+    color: $yellow;
+  }
+}
+
+//recipes menu button
+#menu-item-5200 {
+  > a:hover,
+  ul.sub-menu a:hover,
+  &.current-menu-item > a,
+  .current-menu-item   {
+      box-shadow: 0 4px 0 0 $lime;
+    }
+
+    > a span:after {
+      color: $lime;
+    }
+}
+
+//events menu button
+#menu-item-3590 {
+  > a:hover,
+  &.current-menu-item > a,
+    {
+    box-shadow: 0 4px 0 0 $orange;
+  }
+}
+
+
+//offerings menu button
+#menu-item-9505 {
+  > a:hover,
+  &.current-menu-item > a ,
+  .current-menu-item {
+    box-shadow: 0 4px 0 0 $purple;
+  }
+}
+
+//TV menu button
+#menu-item-23 {
+  > a:hover,
+  &.current-menu-item > a  {
+    box-shadow: 0 4px 0 0 $coral;
+  }
+}
+
+//contact menu button
+#menu-item-19 {
+  > a:hover,
+  &.current-menu-item > a  {
+      box-shadow: 0 4px 0 0 $turq;
+    }
+}
+
+// sign-up-form banner under nav
+// =============================================================================
+.sign-up-form-wrapper {
+  @include clearfix;
+  width: 100%;
+  background: $turq;
+
+  .inner-sign-up-wrapper {
+    @include clearfix;
+    margin: 0 auto;
+    width: 94%;
+
+      // mobile
+        @include break(baby-bear) {
+          width: 100%;
+        }
+
+     h4 {
+      margin: 17px 1% 0 0;
+      color: $white;
+      float: left;
+      font-size: 20px;
+
+      // Breakpoint: Tablets and Below)
+      @include break(cubs) {
+        display: block;
+        text-align: center;
+        margin: 0 0 5px;
+        width: 100%;
+      }
+    }
+  }
+
+  .x-subscribe-form-9512 {
+    input[type="text"], 
+    input[type="email"],
+    input[type="submit"] {
+      width: initial;
+      height: 35px;
+      margin: 0;
+      font-size: 14px;
+
+      // Breakpoint: Tablets and Below)
+      @include break(cubs) {
+        width: 100%;
+        padding: 0 3px;
+      }
+    }
+
+    fieldset {
+      margin: 10px 1% 10px 0;
+      float: left;
+      &:last-of-type {
+        margin-left: 0;
+      }
+
+      // Breakpoint: Tablets and Below)
+      @include break(cubs) {
+        width: 32.3%;
+        margin: 0 1% 10px 0;
+      }
+    }
+
+    .submit {
+      text-shadow: none;
+      line-height: 1;
+      &:hover,
+      &:focus,
+      &:active {
+        text-shadow: none;
+      }
+    }
+  }
+}
+
+// Breakpoint: baby-bear (Up to Landscape Phone)
+// @include break(baby-bear) {
+
+// }
+
+// Breakpoint: cubs (Tablets and Below)
+// @include break(cubs) {
+
+// }

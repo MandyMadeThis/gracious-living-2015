@@ -31,22 +31,10 @@ module.exports = function(grunt) {
         // watch these files and do these tasks when something changes
         watch: {
             css: {
-                files: ['scss/**/*.scss'],
+                files: ['framework/scss/**/*.scss'],
                 tasks: ['sass'],
                 options: {
                     spawn: false,
-                }
-            }
-        },
-
-        browserSync: {
-            dev: {
-                bsFiles: {
-                    src: 'style.css'
-                },
-                options: {
-                    watchTask: true,
-                    proxy: 'localhost:8888/'
                 }
             }
         },
@@ -68,9 +56,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-notify');
-    grunt.loadNpmTasks('grunt-browser-sync');
 
     // type: 'grunt' for development tasks.
-    grunt.registerTask('default', ['sass', 'autoprefixer', 'browserSync', 'notify_hooks', 'watch']);
+    grunt.registerTask('default', ['sass', 'autoprefixer', 'notify_hooks', 'watch']);
 
 };
