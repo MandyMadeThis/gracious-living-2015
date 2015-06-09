@@ -1,0 +1,15 @@
+
+// Services page
+.page-id-9250 {
+  .x-block-grid.two-up {
+    h2 {color: $purple;}
+    i {background: $purple;}
+  }
+
+  .x-block-grid.two-up>li {
+    // Breakpoint: cubs (Tablets and Below)
+    @include break(cubs) {
+      width: 100%;
+    }
+  }
+}

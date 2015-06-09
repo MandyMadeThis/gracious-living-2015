@@ -5,12 +5,20 @@
   }
 }
 
+//Sponsors
+.page-id-16 {
+  .entry-content {
+    img { box-shadow: none; }
+  }
+}
 
-// Gracious living offers
-.page-id-9250 {
-  .x-block-grid.two-up {
-    h2 {color: $turq;}
-    i {background: $turq;}
+#sponsors-accordion {
+  .x-accordion-toggle {
+    background-color: $orange;
+  }
+
+  .x-accordion-inner {
+    overflow: hidden;
   }
 }
 

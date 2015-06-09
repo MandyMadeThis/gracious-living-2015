@@ -7,6 +7,32 @@
   }
 }
 
+//single post pages
+.single {
+
+  &.tribe-theme-child-gracious_living_2015 {
+    .x-container>.offset {
+      margin-top: 80px;
+    }
+  }
+  
+  .x-container.max.width.main {
+    max-width: 760px;
+    margin: 0 auto;
+
+    .p-meta {
+      display: inline-block;
+    }
+  }
+
+  .x-comments-list {
+   .children {
+      margin-left: 85px;
+    } 
+  }
+
+}
+
 // SETTING DEFAULT COLOURS ON PAGES
 // ============================================================================
 
@@ -120,13 +146,18 @@
 
 // BLOG & BLOG CAT PAGES: PURPLE HEAD, YELLOW ACCENTS
 .blog,
-.single-post,
 .category-nutrition,
+.nutrition,
 .category-inspiration,
+.inspiration,
 .category-yoga,
+.yoga,
 .category-health-beauty,
+.health-beauty,
 .category-my-adventures,
-.category-news {
+.my-adventures
+.category-news,
+.news {
 
   .x-topbar,
   .sign-up-form-wrapper,
@@ -164,23 +195,42 @@
   }
 
   .entry-content img {
-    width: 96%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 97%;
+    margin: 2em auto;
     border-radius: 0;
     box-shadow: 0 0 0 8px $black, 0 0 0 17px $white, 0 0 0 19px $yellow;
   }
+
+  //single blog posts
+  &.single {
+      .p-meta {
+        background-color: yellow;
+      }
+    }
 }
 
 
 // RECIPES: CORAL HEAD, LIME ACCENTS
 .page-id-5197,
 .category-juice-and-smoothie-recipes,
+.juice-and-smoothie-recipes,
 .category-dressing-and-sauce-recipes,
+.dressing-and-sauce-recipes,
 .category-dessert-recipes,
+.dessert-recipes,
 .category-salad-recipes,
+.salad-recipes
 .category-soup-recipes,
-.category-breakfast-recipes {
+.soup-recipes,
+.category-breakfast-recipes,
+.breakfast-recipes {
+
+  //single blog posts
+  &.single {
+      .p-meta {
+        background-color: $lime;
+      }
+    }
 
   .x-topbar,
   .sign-up-form-wrapper,
@@ -214,6 +264,8 @@
     border-radius: 0;
     box-shadow: 0 0 0 8px $black, 0 0 0 17px $white, 0 0 0 19px $lime;
   }
+
+  
 
 }
 
@@ -352,6 +404,13 @@
     margin-right: auto;
     border-radius: 0;
     box-shadow: 0 0 0 8px $black, 0 0 0 17px $white, 0 0 0 19px $coral;
+  }
+}
+
+//removing the extra space from offset
+.tribe-theme-child-gracious_living_2015 {
+  .x-container>.offset {
+    margin-top: 0;
   }
 }
 
