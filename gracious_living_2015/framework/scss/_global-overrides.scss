@@ -9,13 +9,12 @@
 
 //single post pages
 .single {
-
-  &.tribe-theme-child-gracious_living_2015 {
-    .x-container>.offset {
+  &.x-child-theme-active {
+    .x-container > .offset {
       margin-top: 80px;
     }
   }
-  
+
   .x-container.max.width.main {
     max-width: 760px;
     margin: 0 auto;
@@ -26,11 +25,30 @@
   }
 
   .x-comments-list {
-   .children {
+    .children {
       margin-left: 85px;
-    } 
+    }
   }
+}
 
+.x-child-theme-active {
+    .h-landmark {
+      float: right;
+    }
+
+  .x-section {
+    .x-btn {
+      border: none;
+      background-color: $turq;
+
+      &:hover {
+        color: #fff;
+        border: none;
+        border-color: none;
+        background-color: $turq-dark;
+      }
+    }
+  }
 }
 
 // SETTING DEFAULT COLOURS ON PAGES
@@ -45,8 +63,8 @@
     background-color: $lime;
   }
 
-  .x-btn, 
-  .button, 
+  .x-btn,
+  .button,
   [type="submit"] {
     background: $turq;
 
@@ -60,7 +78,7 @@
     }
   }
 
-  .h-landmark.entry-title {
+  .h-landmark {
     color: $turq;
   }
 
@@ -69,57 +87,56 @@
     margin-left: auto;
     margin-right: auto;
     border-radius: 0;
-    box-shadow: 0 0 0 8px $black, 0 0 0 17px $white, 0 0 0 19px $turq;
+    box-shadow: 0 0 0 8px $grey-dark, 0 0 0 17px $white, 0 0 0 19px $turq;
   }
 
   // Contact form styling
   #wpcf7-f4396-p17-o1 {
-      select,
-      textarea,
-      input[type="text"],
-      input[type="email"],
-      input[type="search"],
-      .uneditable-input {
-        color: $turq;
-      }
-
-      select,
-      textarea,
-      input[type="text"],
-      input[type="email"],
-      input[type="search"] {
-        border: 3px solid $turq;
-      }
-
-      .wpcf7-submit {
-        width: 100%;
-      }
+    select,
+    textarea,
+    input[type="text"],
+    input[type="email"],
+    input[type="search"],
+    .uneditable-input {
+      color: $turq;
     }
 
-    img.ajax-loader {
-      height: 0;
+    select,
+    textarea,
+    input[type="text"],
+    input[type="email"],
+    input[type="search"] {
+      border: 3px solid $turq;
+    }
+
+    .wpcf7-submit {
+      width: 100%;
     }
   }
-  
-// ABOUT PAGES: ORANGE HEADER/ TURQ ACCENTS 
+
+  img.ajax-loader {
+    height: 0;
+  }
+}
+
+// ABOUT PAGES: ORANGE HEADER/ TURQ ACCENTS
 .page-id-10,
 .page-id-16,
 .page-id-1085,
 .page-id-12,
-.page-id-15, 
+.page-id-15,
 .page-id-3092 {
-
   .x-topbar,
   .sign-up-form-wrapper,
   .x-colophon.bottom {
     background-color: $orange;
   }
 
-  .x-btn, 
-  .button, 
+  .x-btn,
+  .button,
   [type="submit"] {
     background: $turq;
-    
+
     &:hover,
     &:focus,
     &:active {
@@ -130,7 +147,7 @@
     }
   }
 
-  .h-landmark.entry-title {
+  .h-landmark {
     color: $turq;
   }
 
@@ -139,10 +156,9 @@
     margin-left: auto;
     margin-right: auto;
     border-radius: 0;
-    box-shadow: 0 0 0 8px $black, 0 0 0 17px $white, 0 0 0 19px $turq;
+    box-shadow: 0 0 0 8px $grey-dark, 0 0 0 17px $white, 0 0 0 19px $turq;
   }
 }
-
 
 // BLOG & BLOG CAT PAGES: PURPLE HEAD, YELLOW ACCENTS
 .blog,
@@ -155,10 +171,9 @@
 .category-health-beauty,
 .health-beauty,
 .category-my-adventures,
-.my-adventures
+.my-adventures,
 .category-news,
 .news {
-
   .x-topbar,
   .sign-up-form-wrapper,
   .x-colophon.bottom {
@@ -169,16 +184,16 @@
     .entry-featured {
       position: relative;
       top: 11px;
-      box-shadow: 0 0 0 8px $black, 0 0 0 17px $white, 0 0 0 19px $yellow;
+      box-shadow: 0 0 0 8px $grey-dark, 0 0 0 17px $white, 0 0 0 19px $yellow;
     }
   }
 
-  .x-btn, 
-  .button, 
+  .x-btn,
+  .button,
   [type="submit"] {
     background: $yellow;
     color: $grey-dark;
-    
+
     &:hover,
     &:focus,
     &:active {
@@ -190,7 +205,7 @@
     }
   }
 
-  .h-landmark.entry-title {
+  .h-landmark {
     color: $yellow-dark;
   }
 
@@ -198,17 +213,16 @@
     width: 97%;
     margin: 2em auto;
     border-radius: 0;
-    box-shadow: 0 0 0 8px $black, 0 0 0 17px $white, 0 0 0 19px $yellow;
+    box-shadow: 0 0 0 8px $grey-dark, 0 0 0 17px $white, 0 0 0 19px $yellow;
   }
 
   //single blog posts
   &.single {
-      .p-meta {
-        background-color: yellow;
-      }
+    .p-meta {
+      background-color: yellow;
     }
+  }
 }
-
 
 // RECIPES: CORAL HEAD, LIME ACCENTS
 .page-id-5197,
@@ -224,13 +238,19 @@
 .soup-recipes,
 .category-breakfast-recipes,
 .breakfast-recipes {
-
   //single blog posts
   &.single {
-      .p-meta {
-        background-color: $lime;
+    .p-meta {
+      background-color: $lime;
+    }
+
+    .entry-content {
+      img {
+        margin-top: 25px;
+        margin-bottom: 25px;
       }
     }
+  }
 
   .x-topbar,
   .sign-up-form-wrapper,
@@ -238,11 +258,11 @@
     background-color: $coral;
   }
 
-  .x-btn, 
-  .button, 
+  .x-btn,
+  .button,
   [type="submit"] {
     background: $lime;
-    
+
     &:hover,
     &:focus,
     &:active {
@@ -253,7 +273,7 @@
     }
   }
 
-  .h-landmark.entry-title {
+  .h-landmark {
     color: $lime;
   }
 
@@ -262,28 +282,23 @@
     margin-left: auto;
     margin-right: auto;
     border-radius: 0;
-    box-shadow: 0 0 0 8px $black, 0 0 0 17px $white, 0 0 0 19px $lime;
+    box-shadow: 0 0 0 8px $grey-dark, 0 0 0 17px $white, 0 0 0 19px $lime;
   }
-
-  
-
 }
 
 // EVENTS + EVENT PAGES: TURQ HEAD ORANGE ACCENTS
-.page-id-3589,
-.single-tribe_events {
-
+.tribe-theme-child-gracious_living_2015 {
   .x-topbar,
   .sign-up-form-wrapper,
   .x-colophon.bottom {
     background-color: $turq;
   }
 
-  .x-btn, 
-  .button, 
+  .x-btn,
+  .button,
   [type="submit"] {
     background: $orange;
-    
+
     &:hover,
     &:focus,
     &:active {
@@ -294,32 +309,38 @@
     }
   }
 
-  .h-landmark.entry-title,
+  .h-landmark,
   .tribe-events-single-event-title {
     color: $orange;
   }
 
   .entry-content img {
-    width: 96%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 2%;
     border-radius: 0;
-    box-shadow: 0 0 0 8px $black, 0 0 0 17px $white, 0 0 0 19px $orange;
+    box-shadow: 0 0 0 8px $grey-dark, 0 0 0 17px $white, 0 0 0 19px $orange;
+  }
+
+  .tribe-events-event-image {
+    img {
+      width: 96%;
+      border-radius: 0;
+      box-shadow: 0 0 0 8px $grey-dark, 0 0 0 17px $white, 0 0 0 19px $orange;
+    } 
   }
 }
 
-
 // OFFERINGS + OFFERINGS PAGES: YELLOW HEAD, PURPLE ACCENTS
 .page-id-9503,
-.page-id-9250, 
+.page-id-9250,
 .page-id-4986,
 .page-id-4388,
 .page-id-4386 {
-
   .x-colophon.bottom .x-colophon-content {
     color: $grey-dark;
 
-    a {color: $grey-dark;}
+    a {
+      color: $grey-dark;
+    }
   }
 
   .x-topbar,
@@ -338,15 +359,15 @@
     .entry-featured {
       position: relative;
       top: 11px;
-      box-shadow: 0 0 0 8px $black, 0 0 0 17px $white, 0 0 0 19px $purple;
+      box-shadow: 0 0 0 8px $grey-dark, 0 0 0 17px $white, 0 0 0 19px $purple;
     }
   }
 
-  .x-btn, 
-  .button, 
+  .x-btn,
+  .button,
   [type="submit"] {
     background: $purple;
-    
+
     &:hover,
     &:focus,
     &:active {
@@ -357,7 +378,7 @@
     }
   }
 
-  .h-landmark.entry-title {
+  .h-landmark {
     color: $purple;
   }
 
@@ -366,24 +387,23 @@
     margin-left: auto;
     margin-right: auto;
     border-radius: 0;
-    box-shadow: 0 0 0 8px $black, 0 0 0 17px $white, 0 0 0 19px $purple;
+    box-shadow: 0 0 0 8px $grey-dark, 0 0 0 17px $white, 0 0 0 19px $purple;
   }
 }
 
 // GL TV: LIME HEAD, CORAL ACCENTS
-.page-id-13 {
-
+.category-gracious-living-tv {
   .x-topbar,
   .sign-up-form-wrapper,
   .x-colophon.bottom {
     background-color: $lime;
   }
 
-  .x-btn, 
-  .button, 
+  .x-btn,
+  .button,
   [type="submit"] {
     background: $coral;
-    
+
     &:hover,
     &:focus,
     &:active {
@@ -394,7 +414,7 @@
     }
   }
 
-  .h-landmark.entry-title {
+  .h-landmark {
     color: $coral;
   }
 
@@ -403,19 +423,19 @@
     margin-left: auto;
     margin-right: auto;
     border-radius: 0;
-    box-shadow: 0 0 0 8px $black, 0 0 0 17px $white, 0 0 0 19px $coral;
+    box-shadow: 0 0 0 8px $grey-dark, 0 0 0 17px $white, 0 0 0 19px $coral;
   }
 }
 
 //removing the extra space from offset
-.tribe-theme-child-gracious_living_2015 {
-  .x-container>.offset {
+.x-child-theme-active {
+  .x-container > .offset {
     margin-top: 0;
   }
 }
 
 // twitter/Instagram footer
-.tribe-theme-child-gracious_living_2015 {
+.x-child-theme-active {
   .x-colophon.top {
     background-color: $grey;
     color: $white;
@@ -480,9 +500,21 @@ cite.x-cite {
 
   img {
     border-radius: 0;
-    box-shadow: 0 0 0 8px $black, 0 0 0 17px $white, 0 0 0 19px $turq;
-    margin-top: 25px;
-    margin-bottom: 25px;
+    box-shadow: 0 0 0 8px $grey-dark, 0 0 0 17px $white, 0 0 0 19px $turq;
+    margin: 4% 2%;
+
+    &.alignleft {
+      margin-right: 4%;
+    }
+
+    &.alignright {
+      margin-left: 4%;
+    }
+
+    &.aligncenter {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }
 
@@ -497,51 +529,27 @@ cite.x-cite {
 // borders
 // =============================================================================
 .orange-border {
-  width: 96%;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 0;
-  box-shadow: 0 0 0 8px $black, 0 0 0 17px $white, 0 0 0 19px $orange;
+  box-shadow: 0 0 0 8px $grey-dark, 0 0 0 17px $white, 0 0 0 19px $orange;
 }
 
 .purple-border {
-  width: 96%;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 0;
-  box-shadow: 0 0 0 8px $black, 0 0 0 17px $white, 0 0 0 19px $purple;
+  box-shadow: 0 0 0 8px $grey-dark, 0 0 0 17px $white, 0 0 0 19px $purple;
 }
 
 .yellow-border {
-  width: 96%;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 0;
-  box-shadow: 0 0 0 8px $black, 0 0 0 17px $white, 0 0 0 19px $yellow;
+  box-shadow: 0 0 0 8px $grey-dark, 0 0 0 17px $white, 0 0 0 19px $yellow;
 }
 
 .lime-border {
-  width: 96%;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 0;
-  box-shadow: 0 0 0 8px $black, 0 0 0 17px $white, 0 0 0 19px $lime;
+  box-shadow: 0 0 0 8px $grey-dark, 0 0 0 17px $white, 0 0 0 19px $lime;
 }
 
 .coral-border {
-  width: 96%;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 0;
-  box-shadow: 0 0 0 8px $black, 0 0 0 17px $white, 0 0 0 19px $coral;
+  box-shadow: 0 0 0 8px $grey-dark, 0 0 0 17px $white, 0 0 0 19px $coral;
 }
 
 .turq-border {
-  width: 96%;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 0;
-  box-shadow: 0 0 0 8px $black, 0 0 0 17px $white, 0 0 0 19px $turq;
+  box-shadow: 0 0 0 8px $grey-dark, 0 0 0 17px $white, 0 0 0 19px $turq;
 }
 
 // Button styles
@@ -570,14 +578,18 @@ cite.x-cite {
   &.button-orange {
     background: $orange;
 
-    .x-section & {background: $orange;}
+    .x-section & {
+      background: $orange;
+    }
 
     &:hover,
     &:focus,
     &:active {
       background: $orange-dark;
 
-      .x-section & {background: $orange-dark}
+      .x-section & {
+        background: $orange-dark;
+      }
     }
   }
 
@@ -587,7 +599,7 @@ cite.x-cite {
     text-shadow: none;
 
     .x-section & {
-      background: $yellow; 
+      background: $yellow;
       color: $grey-dark;
       text-shadow: none;
     }
@@ -600,52 +612,64 @@ cite.x-cite {
       text-shadow: none;
 
       .x-section & {
-        background: $yellow-dark; 
+        background: $yellow-dark;
         color: $grey-dark;
         text-shadow: none;
       }
-    }   
+    }
   }
 
   &.button-purple {
     background: $purple;
 
-    .x-section & {background: $purple;}
+    .x-section & {
+      background: $purple;
+    }
 
     &:hover,
     &:focus,
     &:active {
       background: $purple-dark;
 
-      .x-section & {background: $purple-dark}
+      .x-section & {
+        background: $purple-dark;
+      }
     }
   }
 
   &.button-coral {
     background: $coral;
 
-    .x-section & {background: $coral;}
-  
+    .x-section & {
+      background: $coral;
+    }
+
     &:hover,
     &:focus,
     &:active {
       background: $coral-dark;
 
-      .x-section & {background: $coral-dark}
+      .x-section & {
+        background: $coral-dark;
+      }
     }
   }
 
   &.button-lime {
     background: $lime;
 
-    .x-section & {background: $lime;}
+    .x-section & {
+      background: $lime;
+    }
 
     &:hover,
     &:focus,
     &:active {
       background: $lime-dark;
 
-      .x-section & {background: $lime-dark}
+      .x-section & {
+        background: $lime-dark;
+      }
     }
   }
 }

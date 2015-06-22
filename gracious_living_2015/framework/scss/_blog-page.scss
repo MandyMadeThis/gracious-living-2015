@@ -1,0 +1,23 @@
+.blog .x-main{
+  article:nth-of-type(odd) {
+    .entry-featured {
+      float: right;
+
+      // Breakpoint: cubs (Tablets and Below)
+      @include break(cubs) {
+        float: none;
+      }
+    }
+    .entry-wrap {
+      float: left;
+      padding-right: 35px;
+      padding-left: 0;
+      // Breakpoint: cubs (Tablets and Below)
+      @include break(cubs) {
+        float: none;
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }  
+}

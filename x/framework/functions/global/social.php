@@ -75,7 +75,7 @@ if ( ! function_exists( 'x_social_meta' ) ) :
     $url         = get_permalink();
     $type        = ( is_singular() ) ? 'article' : 'website';
     $image       = x_get_featured_image_with_fallback_url();
-    $title       = ( x_is_buddypress() ) ? x_buddypress_get_the_title() : get_the_title();
+    $title       = the_title_attribute( array( 'echo' => false ) );
     $site_name   = get_bloginfo( 'name' );
     $description = ( is_singular() ) ? trim( wp_trim_words( strip_shortcodes( strip_tags( get_post()->post_content ) ), 35, '' ), '.!?,;:-' ) . '&hellip;' : get_bloginfo( 'description' );
 

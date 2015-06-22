@@ -1,0 +1,77 @@
+// Event main page and single pages
+.tribe-theme-child-gracious_living_2015 {
+  #tribe-events-pg-template {
+    margin-top: 80px;
+
+    h1, h2, h3, h4, h5, h6 {
+      color: $orange;
+    }
+
+    .tribe-events-content {
+      ol,
+      ul {
+        li {
+          line-height: 1.8;
+        }
+      }
+    }
+  }
+
+  #tribe-bar-form {
+    // Adding a down arrow next to "view as" menu
+    .tribe-bar-views-inner label:after {
+      content: "\f103";
+      font-family: FontAwesome;
+      color: $orange;
+      margin-left: 8px;
+    }
+
+    label {
+      color: $orange;
+    }
+
+    .tribe-bar-submit input[type=submit] {
+      background: $orange;
+    }
+  }
+
+  .tribe-events-meta-group.tribe-events-meta-group-gmap {
+    float: none;
+    width: 100%;
+    padding: 0;
+  }
+
+  .tribe-events-venue-map {
+    img {
+      box-shadow: none;
+    }
+  }
+
+  .tribe-events-page-title {
+    color: $grey-dark;
+  }
+}
+
+// Event list widget on home page
+#tribe-events-adv-list-widget-4 {
+
+  .h-widget {
+    color: $turq;
+  }
+
+  .tribe-mini-calendar-event {
+    color: $grey-dark;
+    
+    a {
+      color: $turq;
+
+      &:hover {
+        color: $turq-dark;
+      }
+    }
+
+    .list-date {
+      background: $orange;
+    }
+  }
+}

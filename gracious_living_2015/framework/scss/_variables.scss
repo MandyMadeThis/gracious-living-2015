@@ -26,18 +26,24 @@ $white-dark:#e5e5e5;
 //helper classes
 .small {font-size: 12px !important;}
 .caps {text-transform: uppercase !important;}
-.turq {color: #55C3BD !important;}
-.yellow {color: #FBED21 !important;}
-.purple {color: #7351A1 !important;}
-.orange {color: #F26D23 !important;}
-.lime {color: #AACC37 !important;}
-.coral {color: #F05364 !important;}
-.turq-bg {background: #55C3BD !important;}
-.yellow-bg {background: #FBED21 !important;}
-.purple-bg {background: #7351A1 !important;}
-.orange-bg {background: #F26D23 !important;}
-.lime-bg {background: #AACC37 !important;}
-.coral-bg {background: #F05364 !important;}
+.turq {color: $turq !important;}
+.yellow {color: $yellow !important;}
+.purple {color: $purple !important;}
+.orange {color: $orange !important;}
+.lime {color: $lime !important;}
+.coral {color: $coral !important;}
+.turq-bg {background: $turq !important;}
+.yellow-bg {background: $yellow !important;}
+.purple-bg {background: $purple !important;}
+.orange-bg {background: $orange !important;}
+.lime-bg {background: $lime !important;}
+.coral-bg {background: $coral !important;}
+.turq-dark-bg {background: $turq-dark !important;}
+.yellow-dark-bg {background: $yellow-dark !important;}
+.purple-dark-bg {background: $purple-dark !important;}
+.orange-dark-bg {background: $orange-dark !important;}
+.lime-dark-bg {background: $lime-dark !important;}
+.coral-dark-bg {background: $coral-dark !important;}
 
 // Breakpoints
 // =============================================================================

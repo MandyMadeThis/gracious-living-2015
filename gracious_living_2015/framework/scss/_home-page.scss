@@ -1,4 +1,12 @@
 .home {
+  .x-container.max.width.main {
+    max-width: 100%;
+  }
+
+  .x-container.width {
+    width: 100%;
+  }
+
   .h-landmark.entry-title{display: none;}
 
   .x-container>.offset {
@@ -6,8 +14,18 @@
   }
 
   .x-flexslider-shortcode-container {margin-bottom: 0;}
+  .x-section .flex-control-nav {
+    top: initial;
+    bottom: 15px;
+  }
 }
 
+#x-section-1 {
+  .x-container.max.width {
+    max-width: 100%;
+    width: 100%;
+  }
+}
 // Removing things from media pages
 // =============================================================================
 .portfolio-category-media {

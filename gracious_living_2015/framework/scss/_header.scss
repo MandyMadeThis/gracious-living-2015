@@ -1,17 +1,16 @@
 // fixing the main nav height
 
-.tribe-theme-child-gracious_living_2015 {
-
+.x-child-theme-active {
   .x-navbar-wrap {
     height: 28px;
   }
 
   .x-navbar .desktop .x-nav > li > a {
+    
     height: 56px;
     padding-top: 25px;
   }
 }
-
 
 // Logo in nav
 .x-brand.img {
@@ -46,7 +45,7 @@
 }
 
 // TOP NAVBAR OVERRIDES
-.tribe-theme-child-gracious_living_2015 {
+.x-child-theme-active {
   .x-topbar,
   .sign-up-form-wrapper,
   .x-colophon.bottom {
@@ -91,7 +90,10 @@
 }
 
 .x-header-landmark.x-container.max.width {
-  margin-top: 65px;
+  // Breakpoint: middle-bear (Up to Portrait Tablet)
+  @include break(mama-bear) {
+    margin-top: 65px;
+  }
 }
 
 // NAV LINK COLOURS
@@ -158,7 +160,7 @@
 }
 
 //TV menu button
-#menu-item-23 {
+#menu-item-9589 {
   > a:hover,
   &.current-menu-item > a  {
     box-shadow: 0 6px 0 0 $coral;
