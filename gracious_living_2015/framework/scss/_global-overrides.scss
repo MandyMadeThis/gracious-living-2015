@@ -308,21 +308,9 @@
       border: none;
     }
   }
-
-  .h-landmark,
-  .tribe-events-single-event-title {
-    color: $orange;
-  }
-
-  .entry-content img {
-    margin: 2%;
-    border-radius: 0;
-    box-shadow: 0 0 0 8px $grey-dark, 0 0 0 17px $white, 0 0 0 19px $orange;
-  }
-
+  
   .tribe-events-event-image {
     img {
-      width: 96%;
       margin-top: 27px;
       border-radius: 0;
       box-shadow: 0 0 0 8px $grey-dark, 0 0 0 17px $white, 0 0 0 19px $orange;

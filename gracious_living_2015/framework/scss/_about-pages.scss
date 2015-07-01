@@ -1,8 +1,15 @@
 // testimonials
 .page-id-1085 {
-  .x-cite {
-    color: $orange;
-  }
+  .x-section {
+    .x-cite {
+        color: $orange;
+        opacity: 1;
+      }
+
+      .x-blockquote {
+        font-size: 1.3em;
+      }
+  } 
 }
 
 //Sponsors

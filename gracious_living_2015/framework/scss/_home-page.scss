@@ -26,6 +26,30 @@
     width: 100%;
   }
 }
+
+// Events widget on main page
+// =============================================================================
+.tribe-events-adv-list-widget {
+  //change look of date on home page event widget
+  .duration {
+    font-size: 15px;
+    color: $orange;
+    font-weight: bold;
+  }
+} 
+
+.tribe-mini-calendar-event .list-info h2 {
+  margin-bottom: 5px;
+}
+
+
+.tribe-events-list .tribe-events-event-image {
+  float: left;
+  width: 28%;
+  margin: 0 4% 0 0;
+}
+
+
 // Removing things from media pages
 // =============================================================================
 .portfolio-category-media {
@@ -39,9 +63,4 @@
     margin-bottom: 0;
   }
 }
-
-
-
-
-
 

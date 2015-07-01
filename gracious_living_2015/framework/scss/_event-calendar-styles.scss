@@ -3,6 +3,7 @@
   
   #tribe-events-pg-template {
     margin-top: 80px;
+    max-width: 760px;
 
     h1, h2, h3, h4, h5, h6 {
       color: $orange;
@@ -17,6 +18,7 @@
       }
     }
   }
+
 
   #tribe-bar-form {
     // Adding a down arrow next to "view as" menu
@@ -38,6 +40,13 @@
 
   //single page stuff
   .single-tribe_events {
+
+    #tribe-events {
+      .tribe-events-schedule h3 {
+        font-weight: bold;
+      }
+    }
+
     .tribe-events-venue-map {
       float: none;
       width: 100%;
@@ -47,8 +56,18 @@
         box-shadow: none;
       }
     }
-  }
 
+    .h-landmark,
+    .tribe-events-single-event-title {
+      color: $orange;
+    }
+
+    .entry-content img {
+      margin: 2%;
+      border-radius: 0;
+      box-shadow: 0 0 0 8px $grey-dark, 0 0 0 17px $white, 0 0 0 19px $orange;
+    }
+  }
 
   .tribe-events-page-title {
     color: $grey-dark;
@@ -78,3 +97,4 @@
     }
   }
 }
+
