@@ -1,14 +1,21 @@
 // Event main page and single pages
 .tribe-theme-child-gracious_living_2015 {
-  
-  #tribe-events-pg-template {
-    margin-top: 80px;
-    max-width: 760px;
 
-    h1, h2, h3, h4, h5, h6 {
-      color: $orange;
+  &.tribe-events-map {
+    #tribe-events-pg-template {
+      @include break(cubs) {
+        max-width: 90%;
+        padding-top: 0;
+      }
     }
+  }
 
+  #tribe-events-pg-template {
+    @include break(mama-bear) {
+      margin-top: 80px;
+      max-width: 760px;
+    }
+    
     .tribe-events-content {
       ol,
       ul {
@@ -17,34 +24,58 @@
         }
       }
     }
-  }
 
-
-  #tribe-bar-form {
-    // Adding a down arrow next to "view as" menu
-    .tribe-bar-views-inner label:after {
-      content: "\f103";
-      font-family: FontAwesome;
-      color: $orange;
-      margin-left: 8px;
+    // Prev & Next Buttons, fixing mobile looks
+    .tribe-events-sub-nav li a {
+      @include break(middle-bear) {
+        display: initial;
+        padding: 0;
+        color: $turq;
+        margin-bottom: initial;
+        background: none;
+      }
     }
 
-    label {
-      color: $orange;
+    .time-details {
+      color: $lime;
+      font-size: 1.2em;
     }
 
-    .tribe-bar-submit input[type=submit] {
-      background: $orange;
+    .tribe-events-event-image {
+      img {
+        margin: 2em auto;
+        border-radius: 0;
+        box-shadow: 0 0 0 8px $grey-dark, 0 0 0 17px $white, 0 0 0 19px $lime;
+        @include break(middle-bear) {
+          max-width: 85%;
+        }
+      }
+
+      a {
+        &:hover img {
+          box-shadow: 0 0 0 8px $grey-dark, 0 0 0 17px $white, 0 0 0 19px $turq-dark;
+        }
+
+        img {
+          margin: 2em auto;
+          border-radius: 0;
+          box-shadow: 0 0 0 8px $grey-dark, 0 0 0 17px $white, 0 0 0 19px $turq;
+          @include break(middle-bear) {
+            max-width: 85%;
+          }
+        }
+      }
     }
   }
 
   //single page stuff
-  .single-tribe_events {
-
-    #tribe-events {
-      .tribe-events-schedule h3 {
-        font-weight: bold;
-      }
+  &.single-tribe_events {
+    .tribe-events-schedule {
+      margin: 0;
+      h3 {
+            color: $lime;
+            font-weight: bold;
+          }
     }
 
     .tribe-events-venue-map {
@@ -57,44 +88,57 @@
       }
     }
 
-    .h-landmark,
-    .tribe-events-single-event-title {
-      color: $orange;
+    .h-landmark {
+      color: $lime;
     }
 
     .entry-content img {
-      margin: 2%;
+      margin: 4% 2%;
       border-radius: 0;
-      box-shadow: 0 0 0 8px $grey-dark, 0 0 0 17px $white, 0 0 0 19px $orange;
+      box-shadow: 0 0 0 8px $grey-dark, 0 0 0 17px $white, 0 0 0 19px $lime;
+
+      @include break(cubs) {
+        margin: 30px 2%;
+      }
+    }
+
+    img.alignleft {
+      margin-right: 4%;
+    }
+    
+    img.alignright {
+      margin-left: 4%;
+    }
+
+    img.aligncenter {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  #tribe-bar-form {
+    // Adding a down arrow next to "view as" menu
+    .tribe-bar-views-inner label {
+      color: $turq;
+
+      &:after {
+        content: "\f103";
+        font-family: FontAwesome;
+        margin-left: 8px;
+      }
+    }
+
+    label {
+      color: $lime;
+    }
+
+    .tribe-bar-submit input[type=submit] {
+      background: $turq;
     }
   }
 
   .tribe-events-page-title {
     color: $grey-dark;
   }
+
 }
-
-// Event list widget on home page
-#tribe-events-adv-list-widget-4 {
-
-  .h-widget {
-    color: $turq;
-  }
-
-  .tribe-mini-calendar-event {
-    color: $grey-dark;
-    
-    a {
-      color: $turq;
-
-      &:hover {
-        color: $turq-dark;
-      }
-    }
-
-    .list-date {
-      background: $orange;
-    }
-  }
-}
-

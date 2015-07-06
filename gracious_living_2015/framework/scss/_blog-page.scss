@@ -4,7 +4,7 @@
       float: right;
 
       // Breakpoint: cubs (Tablets and Below)
-      @include break(cubs) {
+      @include break(baby-bear) {
         float: none;
       }
     }
@@ -13,11 +13,21 @@
       padding-right: 35px;
       padding-left: 0;
       // Breakpoint: cubs (Tablets and Below)
-      @include break(cubs) {
+      @include break(baby-bear) {
         float: none;
         padding-left: 0;
         padding-right: 0;
       }
     }
   }  
+}
+
+.blog .x-main .hentry >.entry-featured, 
+.search .x-main .hentry>.entry-featured, 
+.archive .x-main .hentry>.entry-featured {
+  // Breakpoint: cubs (Tablets and Below)
+  @include break(cubs) {
+    max-width: 92%;
+    margin: 0 auto 3em;
+  }
 }

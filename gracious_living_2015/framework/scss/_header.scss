@@ -1,12 +1,12 @@
 // fixing the main nav height
 
 .x-child-theme-active {
+
   .x-navbar-wrap {
     height: 28px;
   }
 
   .x-navbar .desktop .x-nav > li > a {
-    
     height: 56px;
     padding-top: 25px;
   }
@@ -98,81 +98,18 @@
 
 // NAV LINK COLOURS
 // =============================================================================
-
-// about menu
-#menu-item-25 {
+#menu-main-nav {
   a:hover,
   ul.sub-menu a:hover,
   &.current-menu-item > a, 
   .current-menu-item  {
     box-shadow: 0 6px 0 0 $turq;
   }
-  > a span:after {
+  a span:after {
     color: $turq;
   }
 }
 
-//blog menu
-#menu-item-22 {
-  > a:hover,
-  ul.sub-menu a:hover,
-  &.current-menu-item > a,
-  .current-menu-item   {
-    box-shadow: 0 6px 0 0 $yellow;
-  }
-
-  > a span:after {
-    color: $yellow;
-  }
-}
-
-//recipes menu button
-#menu-item-5200 {
-  > a:hover,
-  ul.sub-menu a:hover,
-  &.current-menu-item > a,
-  .current-menu-item   {
-      box-shadow: 0 6px 0 0 $lime;
-    }
-
-    > a span:after {
-      color: $lime;
-    }
-}
-
-//events menu button
-#menu-item-10602 {
-  > a:hover,
-  &.current-menu-item > a,
-    {
-    box-shadow: 0 6px 0 0 $orange;
-  }
-}
-
-//offerings menu button
-#menu-item-9505 {
-  > a:hover,
-  &.current-menu-item > a ,
-  .current-menu-item {
-    box-shadow: 0 6px 0 0 $purple;
-  }
-}
-
-//TV menu button
-#menu-item-9589 {
-  > a:hover,
-  &.current-menu-item > a  {
-    box-shadow: 0 6px 0 0 $coral;
-  }
-}
-
-//contact menu button
-#menu-item-19 {
-  > a:hover,
-  &.current-menu-item > a  {
-      box-shadow: 0 6px 0 0 $turq;
-    }
-}
 
 // sign-up-form banner under nav
 // =============================================================================
@@ -182,7 +119,6 @@
   background: $turq;
 
   .inner-sign-up-wrapper {
-    @include clearfix;
     margin: 0 auto;
     width: 94%;
 
@@ -248,13 +184,3 @@
     }
   }
 }
-
-// Breakpoint: baby-bear (Up to Landscape Phone)
-// @include break(baby-bear) {
-
-// }
-
-// Breakpoint: cubs (Tablets and Below)
-// @include break(cubs) {
-
-// }

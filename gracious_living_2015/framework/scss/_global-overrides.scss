@@ -1,13 +1,269 @@
-// setting the text colour of the lower footer
-.x-colophon.bottom .x-colophon-content {
-  color: $white;
+.x-child-theme-active {
 
-  a {
+  .x-post-carousel{
+    @include break(baby-bear) {
+      display: none;
+    }
+  }
+
+
+
+  .entry-content{
+    margin-top: 0;
+  }
+  
+  .h-landmark {
+    float: right;
+    color: $lime;
+    font-size: 400%;
+    // Breakpoint: cubs (Tablets and Below)
+    @include break(cubs) {
+      font-size: 330%;
+    }
+
+    @include break(baby-bear) {
+      font-size: 220%;
+    }
+  }
+
+  .x-header-landmark {
+    @include break(baby-bear) {
+     padding: 1em 0;
+    }
+  }
+
+  .x-btn,
+  .button,
+  [type="submit"],
+  .x-section .x-btn {
+    border: none;
+    background-color: $turq;
+    text-transform: uppercase;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background: $turq-dark;
+      outline: none;
+      text-shadow: none;
+      border: none;
+    }
+
+  }
+
+  //Image borders & spacing
+  .entry-content {
+    a {
+      &:hover img {
+        box-shadow: 0 0 0 8px $grey-dark, 0 0 0 17px $white, 0 0 0 19px $turq-dark;
+      }
+
+      img {
+        max-width: 95%;
+        margin: 4% 2%;
+        border-radius: 0;
+        box-shadow: 0 0 0 8px $grey-dark, 0 0 0 17px $white, 0 0 0 19px $turq;
+
+        @include break(cubs) {
+          margin: 30px 2%;
+        }
+      }
+    }
+
+    img {
+      max-width: 95%;
+      margin: 4% 2%;
+      border-radius: 0;
+      box-shadow: 0 0 0 8px $grey-dark, 0 0 0 17px $white, 0 0 0 19px $lime;
+
+      @include break(cubs) {
+        margin: 30px 2%;
+      }
+
+      &.alignleft {
+        margin-right: 4%;
+      }
+      
+      &.alignright {
+        margin-left: 4%;
+      }
+
+      &.aligncenter {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+    }
+  }
+
+  // Footer
+  // =============================================================================
+  .x-colophon.top {
+    background:$grey;
+  }
+
+  .x-colophon.bottom .x-colophon-content {
     color: $white;
+
+    a {
+      color: $white;
+    }
   }
 }
 
-//single post pages
+// Making headings more responsive and better sized for mobile
+  h1,
+  .h1 {
+    @include break(cubs) {
+      font-size: 330%;
+    }
+    @include break(baby-bear) {
+      font-size: 220%;
+    }   
+  }
+
+  h2,
+  .h2 {
+    @include break(cubs) {
+      font-size: 200%;
+    }
+    @include break(baby-bear) {
+      font-size: 180%;
+    } 
+  }
+
+  h3,
+  .h3 {
+    @include break(cubs) {
+      font-size: 180%;
+    }
+    @include break(baby-bear) {
+      font-size: 150%;
+    } 
+  }
+
+  h4,
+  .h4 {
+    @include break(cubs) {
+      font-size: 150%;
+    }
+    @include break(baby-bear) {
+      font-size: 125%;
+    } 
+  }
+
+  h5,
+  .h5 {
+    @include break(cubs) {
+      font-size: 125%;
+    }
+    @include break(baby-bear) {
+      font-size: 115%;
+    } 
+  }
+
+// SETTING DEFAULT COLOURS ON ALL PAGES LIME HEAD + TURQ LINKS, BUTTONS & ACCENTS
+// ============================================================================
+.x-topbar,
+.sign-up-form-wrapper,
+.x-colophon.bottom {
+  background-color: $lime;
+}
+
+// Contact form styling
+// ============================================================================
+#wpcf7-f4396-p17-o1 {
+  select,
+  textarea,
+  input[type="text"],
+  input[type="email"],
+  input[type="search"],
+  .uneditable-input {
+    color: $lime;
+  }
+
+  select,
+  textarea,
+  input[type="text"],
+  input[type="email"],
+  input[type="search"] {
+    border: 3px solid $lime;
+  }
+
+  .wpcf7-submit {
+    width: 100%;
+  }
+}
+
+img.ajax-loader {
+  height: 0;
+}
+
+// META INFO
+// ============================================================================
+.blog,
+.single-post {
+  .p-meta {
+    font-size: 0.85em;
+
+    a {
+      font-weight: bold;
+      color: $turq;
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: $turq-dark;
+      }
+    }
+
+    span {
+      padding: 0 1px;
+    }
+  }
+}
+
+// Blockquote and Cite
+//============================================================================
+.x-child-theme-active {
+  blockquote.x-blockquote {
+    padding: 1em 0 1.5em;
+    font-size: 1.3em;
+    line-height: 1.5;
+    overflow: hidden;
+
+    @include break(baby-bear) {
+      font-size: 1.2em;
+      line-height: 1.4;
+    }
+  }
+
+  cite.x-cite {
+    color: $lime;
+    float: right;
+    opacity: 1;
+    margin-top: 1.5em;
+    font-weight: bold;
+  }
+
+}
+
+
+// BLOG & BLOG CAT PAGES:
+//============================================================================
+.blog,
+.category {
+  .x-main {
+    .entry-featured {
+      position: relative;
+      top: 11px;
+      box-shadow: 0 0 0 8px $grey-dark, 0 0 0 17px $white, 0 0 0 19px $turq;
+    }
+  }
+}
+
+//Single Post Pages
+//============================================================================
 .single {
   &.x-child-theme-active {
     .x-container > .offset {
@@ -31,681 +287,19 @@
   }
 }
 
-.x-child-theme-active {
-    .h-landmark {
-      float: right;
-    }
 
-  .x-section {
-    .x-btn {
-      border: none;
-      background-color: $turq;
+// Remove the break tag under the get social plugin on pages that aren't displaying it
+//============================================================================
 
-      &:hover {
-        color: #fff;
-        border: none;
-        border-color: none;
-        background-color: $turq-dark;
-      }
-    }
-  }
-}
-
-// SETTING DEFAULT COLOURS ON PAGES
-// ============================================================================
-
-// HOME & CONTACT = LIME HEAD + TURQ ACCENTS
 .home,
-.page-id-17 {
-  .x-topbar,
-  .sign-up-form-wrapper,
-  .x-colophon.bottom {
-    background-color: $lime;
-  }
-
-  .x-btn,
-  .button,
-  [type="submit"] {
-    background: $turq;
-
-    &:hover,
-    &:focus,
-    &:active {
-      background: $turq-dark;
-      outline: none;
-      text-shadow: none;
-      border: none;
-    }
-  }
-
-  .h-landmark {
-    color: $turq;
-  }
-
-  .entry-content img {
-    // width: 96%;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 0;
-    box-shadow: 0 0 0 8px $grey-dark, 0 0 0 17px $white, 0 0 0 19px $turq;
-  }
-
-  // Contact form styling
-  #wpcf7-f4396-p17-o1 {
-    select,
-    textarea,
-    input[type="text"],
-    input[type="email"],
-    input[type="search"],
-    .uneditable-input {
-      color: $turq;
-    }
-
-    select,
-    textarea,
-    input[type="text"],
-    input[type="email"],
-    input[type="search"] {
-      border: 3px solid $turq;
-    }
-
-    .wpcf7-submit {
-      width: 100%;
-    }
-  }
-
-  img.ajax-loader {
-    height: 0;
-  }
-}
-
-// ABOUT PAGES: ORANGE HEADER/ TURQ ACCENTS
-.page-id-10,
-.page-id-16,
-.page-id-1085,
-.page-id-12,
-.page-id-15,
-.page-id-3092 {
-  .x-topbar,
-  .sign-up-form-wrapper,
-  .x-colophon.bottom {
-    background-color: $orange;
-  }
-
-  .x-btn,
-  .button,
-  [type="submit"] {
-    background: $turq;
-
-    &:hover,
-    &:focus,
-    &:active {
-      background: $turq-dark;
-      outline: none;
-      text-shadow: none;
-      border: none;
-    }
-  }
-
-  .h-landmark {
-    color: $turq;
-  }
-
-  .entry-content img {
-    // width: 96%;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 0;
-    box-shadow: 0 0 0 8px $grey-dark, 0 0 0 17px $white, 0 0 0 19px $turq;
-  }
-}
-
-// BLOG & BLOG CAT PAGES: PURPLE HEAD, YELLOW ACCENTS
 .blog,
-.category-nutrition,
-.nutrition,
-.category-inspiration,
-.inspiration,
-.category-yoga,
-.yoga,
-.category-health-beauty,
-.health-beauty,
-.category-my-adventures,
-.my-adventures,
-.category-news,
-.news {
-  .x-topbar,
-  .sign-up-form-wrapper,
-  .x-colophon.bottom {
-    background-color: $purple;
-  }
-
-  .x-main {
-    .entry-featured {
-      position: relative;
-      top: 11px;
-      box-shadow: 0 0 0 8px $grey-dark, 0 0 0 17px $white, 0 0 0 19px $yellow;
-    }
-  }
-
-  .x-btn,
-  .button,
-  [type="submit"] {
-    background: $yellow;
-    color: $grey-dark;
-
-    &:hover,
-    &:focus,
-    &:active {
-      background: $yellow-dark;
-      color: $grey-dark;
-      outline: none;
-      text-shadow: none;
-      border: none;
-    }
-  }
-
-  .h-landmark {
-    color: $yellow-dark;
-  }
-
-  .entry-content img {
-    // width: 97%;
-    margin: 2em auto;
-    border-radius: 0;
-    box-shadow: 0 0 0 8px $grey-dark, 0 0 0 17px $white, 0 0 0 19px $yellow;
-  }
-
-  //single blog posts
-  &.single {
-    .p-meta {
-      background-color: yellow;
-    }
+.page-id-17,
+.page-id-9503, 
+.tribe-events-map,
+.page-id-5197 {
+  .getsocial + br {
+    display: none;
   }
 }
-
-// RECIPES: CORAL HEAD, LIME ACCENTS
-.page-id-5197,
-.category-juice-and-smoothie-recipes,
-.juice-and-smoothie-recipes,
-.category-dressing-and-sauce-recipes,
-.dressing-and-sauce-recipes,
-.category-dessert-recipes,
-.dessert-recipes,
-.category-salad-recipes,
-.salad-recipes
-.category-soup-recipes,
-.soup-recipes,
-.category-breakfast-recipes,
-.breakfast-recipes {
-  //single blog posts
-  &.single {
-    .p-meta {
-      background-color: $lime;
-    }
-
-    .entry-content {
-      img {
-        margin-top: 25px;
-        margin-bottom: 25px;
-      }
-    }
-  }
-
-  .x-topbar,
-  .sign-up-form-wrapper,
-  .x-colophon.bottom {
-    background-color: $coral;
-  }
-
-  .x-btn,
-  .button,
-  [type="submit"] {
-    background: $lime;
-
-    &:hover,
-    &:focus,
-    &:active {
-      background: $lime-dark;
-      outline: none;
-      text-shadow: none;
-      border: none;
-    }
-  }
-
-  .h-landmark {
-    color: $lime;
-  }
-
-  .entry-content img {
-    // width: 96%;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 0;
-    box-shadow: 0 0 0 8px $grey-dark, 0 0 0 17px $white, 0 0 0 19px $lime;
-  }
-}
-
-// EVENTS + EVENT PAGES: TURQ HEAD ORANGE ACCENTS
-.tribe-theme-child-gracious_living_2015 {
-  .x-topbar,
-  .sign-up-form-wrapper,
-  .x-colophon.bottom {
-    background-color: $turq;
-  }
-
-  .x-btn,
-  .button,
-  [type="submit"] {
-    background: $orange;
-
-    &:hover,
-    &:focus,
-    &:active {
-      background: $orange-dark;
-      outline: none;
-      text-shadow: none;
-      border: none;
-    }
-  }
   
-  .tribe-events-event-image {
-    img {
-      margin-top: 27px;
-      border-radius: 0;
-      box-shadow: 0 0 0 8px $grey-dark, 0 0 0 17px $white, 0 0 0 19px $orange;
-    } 
-  }
-}
 
-// OFFERINGS + OFFERINGS PAGES: YELLOW HEAD, PURPLE ACCENTS
-.page-id-9503,
-.page-id-9250,
-.page-id-4986,
-.page-id-4388,
-.page-id-4386 {
-  .x-colophon.bottom .x-colophon-content {
-    color: $grey-dark;
-
-    a {
-      color: $grey-dark;
-    }
-  }
-
-  .x-topbar,
-  .sign-up-form-wrapper,
-  .x-colophon.bottom {
-    background-color: $yellow;
-
-    .x-social-global a,
-    .p-info,
-    .inner-sign-up-wrapper h4 {
-      color: $grey-dark;
-    }
-  }
-
-  .x-main {
-    .entry-featured {
-      position: relative;
-      top: 11px;
-      box-shadow: 0 0 0 8px $grey-dark, 0 0 0 17px $white, 0 0 0 19px $purple;
-    }
-  }
-
-  .x-btn,
-  .button,
-  [type="submit"] {
-    background: $purple;
-
-    &:hover,
-    &:focus,
-    &:active {
-      background: $purple-dark;
-      outline: none;
-      text-shadow: none;
-      border: none;
-    }
-  }
-
-  .h-landmark {
-    color: $purple;
-  }
-
-  .entry-content img {
-    // width: 96%;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 0;
-    box-shadow: 0 0 0 8px $grey-dark, 0 0 0 17px $white, 0 0 0 19px $purple;
-  }
-}
-
-// GL TV: LIME HEAD, CORAL ACCENTS
-.category-gracious-living-tv {
-  .x-topbar,
-  .sign-up-form-wrapper,
-  .x-colophon.bottom {
-    background-color: $lime;
-  }
-
-  .x-btn,
-  .button,
-  [type="submit"] {
-    background: $coral;
-
-    &:hover,
-    &:focus,
-    &:active {
-      background: $coral-dark;
-      outline: none;
-      text-shadow: none;
-      border: none;
-    }
-  }
-
-  .h-landmark {
-    color: $coral;
-  }
-
-  .entry-content img {
-    // width: 96%;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 0;
-    box-shadow: 0 0 0 8px $grey-dark, 0 0 0 17px $white, 0 0 0 19px $coral;
-  }
-}
-
-//removing the extra space from offset
-.x-child-theme-active {
-  .x-container > .offset {
-    margin-top: 0;
-  }
-}
-
-// twitter/Instagram footer
-.x-child-theme-active {
-  .x-colophon.top {
-    background-color: $grey;
-    color: $white;
-  }
-}
-
-// Headings
-// =============================================================================
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
-  line-height: 1.1;
-}
-
-h1, .h1 {
-  font-size: 350%;
-}
-
-cite.x-cite {
-  text-align: right;
-}
-
-// Headlines of pages
-.h-landmark {
-  margin-bottom: 0;
-
-  &.entry-title {
-    text-align: right;
-    font-size: 400%;
-  }
-}
-
-// Images & captions
-// =============================================================================
-.entry-content {
-  display: block;
-  margin: 27px 0 5px;
-
-  .wp-caption > .wp-caption-text,
-  .wp-caption > .wp-caption-text:last-child,
-  .gallery-item > .wp-caption-text,
-  .gallery-item > .wp-caption-text:last-child {
-    margin: 27px 0 5px;
-  }
-
-  .wp-caption,
-  .gallery-item {
-    border-radius: 0;
-    border: none;
-    padding: 0;
-  }
-
-  img {
-    border-radius: 0;
-    box-shadow: 0 0 0 8px $grey-dark, 0 0 0 17px $white, 0 0 0 19px $turq;
-    margin: 4% 2%;
-
-    &.alignleft {
-      margin-right: 4%;
-    }
-
-    &.alignright {
-      margin-left: 4%;
-    }
-
-    &.aligncenter {
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
-}
-
-.x-slide {
-  img {
-    box-shadow: none;
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-}
-
-// borders
-// =============================================================================
-.orange-border {
-  box-shadow: 0 0 0 8px $grey-dark, 0 0 0 17px $white, 0 0 0 19px $orange;
-}
-
-.purple-border {
-  box-shadow: 0 0 0 8px $grey-dark, 0 0 0 17px $white, 0 0 0 19px $purple;
-}
-
-.yellow-border {
-  box-shadow: 0 0 0 8px $grey-dark, 0 0 0 17px $white, 0 0 0 19px $yellow;
-}
-
-.lime-border {
-  box-shadow: 0 0 0 8px $grey-dark, 0 0 0 17px $white, 0 0 0 19px $lime;
-}
-
-.coral-border {
-  box-shadow: 0 0 0 8px $grey-dark, 0 0 0 17px $white, 0 0 0 19px $coral;
-}
-
-.turq-border {
-  box-shadow: 0 0 0 8px $grey-dark, 0 0 0 17px $white, 0 0 0 19px $turq;
-}
-
-// Button styles
-// =============================================================================
-.x-btn,
-.button,
-[type="submit"] {
-  @include base-animation;
-  font-size: 16px;
-  line-height: 2;
-  outline: none;
-  padding: 0.6em 1.125em;
-  text-shadow: none;
-  text-transform: uppercase;
-  border: none;
-
-  &:hover,
-  &:focus,
-  &:active {
-    background: $turq-dark;
-    outline: none;
-    text-shadow: none;
-    border: none;
-  }
-
-  &.button-orange {
-    background: $orange;
-
-    .x-section & {
-      background: $orange;
-    }
-
-    &:hover,
-    &:focus,
-    &:active {
-      background: $orange-dark;
-
-      .x-section & {
-        background: $orange-dark;
-      }
-    }
-  }
-
-  &.button-yellow {
-    background: $yellow;
-    color: $grey-dark;
-    text-shadow: none;
-
-    .x-section & {
-      background: $yellow;
-      color: $grey-dark;
-      text-shadow: none;
-    }
-
-    &:hover,
-    &:focus,
-    &:active {
-      background: $yellow-dark;
-      color: $grey-dark;
-      text-shadow: none;
-
-      .x-section & {
-        background: $yellow-dark;
-        color: $grey-dark;
-        text-shadow: none;
-      }
-    }
-  }
-
-  &.button-purple {
-    background: $purple;
-
-    .x-section & {
-      background: $purple;
-    }
-
-    &:hover,
-    &:focus,
-    &:active {
-      background: $purple-dark;
-
-      .x-section & {
-        background: $purple-dark;
-      }
-    }
-  }
-
-  &.button-coral {
-    background: $coral;
-
-    .x-section & {
-      background: $coral;
-    }
-
-    &:hover,
-    &:focus,
-    &:active {
-      background: $coral-dark;
-
-      .x-section & {
-        background: $coral-dark;
-      }
-    }
-  }
-
-  &.button-lime {
-    background: $lime;
-
-    .x-section & {
-      background: $lime;
-    }
-
-    &:hover,
-    &:focus,
-    &:active {
-      background: $lime-dark;
-
-      .x-section & {
-        background: $lime-dark;
-      }
-    }
-  }
-}
-
-.x-btn,
-.x-btn:hover,
-.button,
-.button:hover,
-[type="submit"],
-[type="submit"]:hover {
-  text-shadow: none;
-}
-
-//footer links
-footer.x-colophon.bottom {
-  a,
-  .x-colophon-content a {
-    &:hover {
-      color: $turq;
-    }
-  }
-}
-
-// sidebar
-// =============================================================================
-// .x-sidebar.right {
-//   .h-widget{
-//       border: none;
-//       color: $turq;
-//       font-size: 1.4em;
-//       // margin-bottom: 0;
-//       // padding-bottom: 0;
-//       .x-img {margin-bottom: 0;}
-//     }
-// }
-
-// single portfolio pages
-// =============================================================================
-.single-x-portfolio {
-  .entry-wrap {
-    float: none;
-    width: 100%;
-  }
-
-  .entry-featured {
-    float: none;
-    padding-right: 0;
-    width: 100%;
-  }
-}

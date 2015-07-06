@@ -1,4 +1,14 @@
 .home {
+
+  .x-section .x-slide {
+    img {
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
   .x-container.max.width.main {
     max-width: 100%;
   }
@@ -17,23 +27,34 @@
   .x-section .flex-control-nav {
     top: initial;
     bottom: 15px;
+    @include break(baby-bear) {
+      bottom: -30px;
+    }
   }
 }
 
 #x-section-1 {
+  @include break(cubs) {
+    padding: 0 !important;
+  }
   .x-container.max.width {
     max-width: 100%;
     width: 100%;
+    @include break(baby-bear) {
+      padding: 0 !important;
+    }
   }
 }
 
 // Events widget on main page
 // =============================================================================
+
+
 .tribe-events-adv-list-widget {
   //change look of date on home page event widget
   .duration {
     font-size: 15px;
-    color: $orange;
+    color: $lime;
     font-weight: bold;
   }
 } 
@@ -43,10 +64,42 @@
 }
 
 
-.tribe-events-list .tribe-events-event-image {
-  float: left;
-  width: 28%;
-  margin: 0 4% 0 0;
+.tribe-events-list {
+  .tribe-events-event-image {
+    float: left;
+    width: 28%;
+    margin: 0 4% 0 0;
+
+    // Breakpoint: middle-bear (Up to Portrait Tablet)
+    @include break(middle-bear) {
+      float: none;
+      width: 86%;
+      margin: 0 auto;
+    }
+  }    
+} 
+
+// Event list widget on home page
+#tribe-events-adv-list-widget-4 {
+  .h-widget {
+    color: $turq;
+  }
+
+  .tribe-mini-calendar-event {
+    color: $grey-dark;
+
+    a {
+      color: $turq;
+
+      &:hover {
+        color: $turq-dark;
+      }
+    }
+
+    .list-date {
+      background: $lime;
+    }
+  }
 }
 
 

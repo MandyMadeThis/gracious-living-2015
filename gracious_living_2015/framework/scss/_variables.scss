@@ -93,11 +93,15 @@ $breakLarge:          1200px !default;
 }
 // Breakpoint: papa-bear (Large Desktop and Up)
 @include break(papa-bear) {
-
+  
+  
+  
 }
 
 // Breakpoint: old-bear (Portrait Tablet to Default Desktop)
 @include break(old-bear) {
+  
+  
 
 }
 
