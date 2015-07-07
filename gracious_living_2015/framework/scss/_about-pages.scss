@@ -1,6 +1,9 @@
 //Sponsors
 .page-id-16 {
-  .entry-content {
+  .entry-content,
+  .entry-content a,
+  .entry-content:hover,
+  .entry-content:hover a {
     img { box-shadow: none; }
   }
 }
