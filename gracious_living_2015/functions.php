@@ -27,7 +27,7 @@ add_filter('widget_text', 'do_shortcode');
 //filter categories on blog index 
 // function blog_index_categories( $query ) {
 //  if ( $query->is_home() && $query->is_main_query() ) {
-//  $query->set( 'cat', '798, 435, 812, 795, 457, 439');
+//  $query->set( 'cat', '798, 435, 812, 795, 457, 439, 845');
 //  }
 // }
 // add_action( 'pre_get_posts', 'blog_index_categories' );
@@ -80,6 +80,11 @@ function custom_teardown_tribe_order_filter() {
 }
 
 
+//set a short excerpt length
+function custom_excerpt_length( $length ) {
+  return 40;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 
 

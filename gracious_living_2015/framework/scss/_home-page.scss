@@ -26,10 +26,7 @@
   .x-flexslider-shortcode-container {margin-bottom: 0;}
   .x-section .flex-control-nav {
     top: initial;
-    bottom: 15px;
-    @include break(baby-bear) {
-      bottom: -30px;
-    }
+    bottom: -30px;
   }
 }
 
@@ -46,74 +43,18 @@
   }
 }
 
-// Events widget on main page
-// =============================================================================
-
-
-.tribe-events-adv-list-widget {
-  //change look of date on home page event widget
-  .duration {
-    font-size: 15px;
-    color: $lime;
-    font-weight: bold;
-  }
-} 
-
-.tribe-mini-calendar-event .list-info h2 {
-  margin-bottom: 5px;
-}
-
-
-.tribe-events-list {
-  .tribe-events-event-image {
-    float: left;
-    width: 28%;
-    margin: 0 4% 0 0;
-
-    // Breakpoint: middle-bear (Up to Portrait Tablet)
-    @include break(middle-bear) {
-      float: none;
-      width: 86%;
-      margin: 0 auto;
-    }
-  }    
-} 
-
-// Event list widget on home page
-#tribe-events-adv-list-widget-4 {
-  .h-widget {
-    color: $turq;
-  }
-
-  .tribe-mini-calendar-event {
-    color: $grey-dark;
-
-    a {
-      color: $turq;
-
-      &:hover {
-        color: $turq-dark;
-      }
-    }
-
-    .list-date {
-      background: $lime;
-    }
-  }
-}
-
 
 // Removing things from media pages
 // =============================================================================
-.portfolio-category-media {
-  .p-meta {display: none;}
-}
+// .portfolio-category-media {
+//   .p-meta {display: none;}
+// }
 
-.portfolio-category-media {
-  .entry-content img {
-    box-shadow: none;
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-}
+// .portfolio-category-media {
+//   .entry-content img {
+//     box-shadow: none;
+//     margin-top: 0;
+//     margin-bottom: 0;
+//   }
+// }
 
