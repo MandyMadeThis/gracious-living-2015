@@ -1,5 +1,12 @@
 .x-child-theme-active {
 
+  // Temp Fix for Shop Entry
+  &.shop {
+    .entry-header {
+      display: none;
+    }
+  }
+
   //Class for narrow content
   &.narrow {
     .x-container.max.width.main {
@@ -45,6 +52,8 @@
     border: none;
     background-color: $turq;
     text-transform: uppercase;
+    font-family: "Raleway","Helvetica Neue",Helvetica,sans-serif;
+    font-weight: 300;
 
     &:hover,
     &:focus,
@@ -53,6 +62,15 @@
       outline: none;
       text-shadow: none;
       border: none;
+    }
+
+    &.button-orange {
+      background-color: $orange;
+      &:hover,
+      &:focus,
+      &:active {
+        background: $orange-dark;
+      }
     }
 
   }
@@ -103,7 +121,7 @@
   }
 
   // Footer
-  // =============================================================================
+  //==========================================================================
   .x-colophon.top {
     background:$grey;
   }
@@ -116,6 +134,13 @@
     }
   }
 }
+
+@media (max-width: 480px) {
+  #sb_instagram.sbi_col_3 #sbi_images .sbi_item, #sb_instagram.sbi_col_4 #sbi_images .sbi_item, #sb_instagram.sbi_col_5 #sbi_images .sbi_item, #sb_instagram.sbi_col_6 #sbi_images .sbi_item, #sb_instagram.sbi_col_7 #sbi_images .sbi_item, #sb_instagram.sbi_col_8 #sbi_images .sbi_item, #sb_instagram.sbi_col_9 #sbi_images .sbi_item, #sb_instagram.sbi_col_10 #sbi_images .sbi_item {
+    width: 50%;
+  }
+}
+
 
 // Making headings more responsive and better sized for mobile
   h1,
@@ -168,6 +193,8 @@
     } 
   }
 
+  p {margin-bottom: 0.5em;}
+
 // SETTING DEFAULT COLOURS ON ALL PAGES LIME HEAD + TURQ LINKS, BUTTONS & ACCENTS
 // ============================================================================
 .x-topbar,
@@ -176,8 +203,43 @@
   background-color: $lime;
 }
 
-// Contact form styling
+// Media and Gallery Fixes
 // ============================================================================
+.gallery-item {
+  border: none;
+  border-radius: 0;
+}
+
+// Contact Page styling
+// ============================================================================
+.page-id-17 {
+  .x-1-2 {
+    img {
+      position: relative;
+      top: 26px;
+    }
+
+    .social-contact-list {
+      margin: 35px auto 0;
+      display: inline-block;
+      width: 100%;
+      padding: 0;
+      list-style-type: none;
+      li {
+        display: table-cell;
+        width: 1%;
+        float: none;
+        position: relative;
+        text-align: center;
+
+        .fa {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+}
+
 #wpcf7-f4396-p17-o1 {
   select,
   textarea,
@@ -193,7 +255,7 @@
   input[type="text"],
   input[type="email"],
   input[type="search"] {
-    border: 3px solid $lime;
+    border: 2px solid $lime;
   }
 
   .wpcf7-submit {

@@ -24,7 +24,7 @@
       .tribe-events-event-image {
         float: none;
         width: 86%;
-        margin: 20px auto;
+        margin: 30px auto;
       }
     }
   }
@@ -32,7 +32,6 @@
   //customizing list page view
   &.events-list {
     .tribe-events-list {
-
       .tribe-events-list-separator-month {
         background-color: $lime;
         color: $grey-dark;
@@ -44,18 +43,19 @@
         margin: 37px 30px 0 19px;
 
         @include break(cubs) {
-          margin:37px 30px 1% 12px;
+          margin: 37px 30px 1% 12px;
         }
 
         @include break(baby-bear) {
-          width: 87%;
-          margin: 0 auto 30px;
-          float: left;
+          width: 96%;
+          margin: 30px auto;
+          float: none;
         }
       }
 
       .tribe-events-list-event-description {
         top: 10px;
+
         @include break(baby-bear) {
           clear: both;
         }
@@ -69,15 +69,113 @@
 
   //customizing calendar/month page view
   &.events-gridview {
-      .tribe-events-page-title {
-        color: $lime;
+    .tribe-events-page-title {
+      color: $lime;
+    }
+
+    #tribe-mobile-container .type-tribe_events .tribe-events-event-image {
+      float: none;
+      width: 96%;
+      margin: 30px auto;
+    }
+  }
+
+  //customizing single venue page view
+  &.single-tribe_venue {
+    .tribe-events-event-image {
+      float: left;
+      width: 25%;
+      margin: 37px 30px 0 19px;
+
+      @include break(cubs) {
+        margin: 37px 30px 1% 12px;
       }
 
-        #tribe-mobile-container .type-tribe_events .tribe-events-event-image {
-          float: none;
-          width: 96%;
-          margin: 20px auto;
+      @include break(baby-bear) {
+        width: 96%;
+        margin: 30px auto;
+        float: none;
       }
+    }
+
+    .tribe-events-list-event-description {
+      top: 10px;
+
+      @include break(baby-bear) {
+        clear: both;
+      }
+    }
+  }
+
+  //scustomizing single page view
+  &.single-tribe_events {
+    .tribe-events-schedule {
+      margin: 0;
+
+      h3 {
+        color: $lime;
+        font-weight: bold;
+      }
+    }
+
+    .tribe-events-venue-map {
+      float: none;
+      width: 100%;
+      padding: 0;
+
+      img {
+        box-shadow: none;
+      }
+    }
+
+    .h-landmark {
+      color: $lime;
+    }
+
+    .tribe-events-event-image {
+
+      img {
+        margin: 4% 2%;
+        border-radius: 0;
+        box-shadow: 0 0 0 8px $grey-dark, 0 0 0 17px $white, 0 0 0 19px $lime;
+
+        @include break(cubs) {
+          margin: 30px 2%;
+        }
+      }
+
+      img.alignleft {
+        margin-right: 4%;
+        @include break(baby-bear) {
+          float: none;
+          margin-right: auto;
+          margin-left: auto;
+        }
+      }
+
+      img.alignright {
+        margin-left: 4%;
+        @include break(baby-bear) {
+          float: none;
+          margin-right: auto;
+          margin-left: auto;
+        }
+      }
+
+      img.aligncenter {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .tribe-events-content {
+      img {
+        max-width: 96%;
+        @include break(cubs) {
+          max-width: 86%;
+        }
+      }
+    }
   }
 
   #tribe-events-pg-template {
@@ -155,55 +253,6 @@
           }
         }
       }
-    }
-  }
-
-  //single page stuff
-  &.single-tribe_events {
-    .tribe-events-schedule {
-      margin: 0;
-
-      h3 {
-        color: $lime;
-        font-weight: bold;
-      }
-    }
-
-    .tribe-events-venue-map {
-      float: none;
-      width: 100%;
-      padding: 0;
-
-      img {
-        box-shadow: none;
-      }
-    }
-
-    .h-landmark {
-      color: $lime;
-    }
-
-    .entry-content img {
-      margin: 4% 2%;
-      border-radius: 0;
-      box-shadow: 0 0 0 8px $grey-dark, 0 0 0 17px $white, 0 0 0 19px $lime;
-
-      @include break(cubs) {
-        margin: 30px 2%;
-      }
-    }
-
-    img.alignleft {
-      margin-right: 4%;
-    }
-
-    img.alignright {
-      margin-left: 4%;
-    }
-
-    img.aligncenter {
-      margin-left: auto;
-      margin-right: auto;
     }
   }
 

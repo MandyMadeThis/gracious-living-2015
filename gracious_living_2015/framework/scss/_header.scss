@@ -10,12 +10,16 @@
     height: 56px;
     padding-top: 25px;
   }
+
+  .x-header-landmark {
+    padding: 10px 0;
+  }
 }
 
 // Logo in nav
 .x-brand.img {
-  position: relative;
-  bottom: -5px;
+  position: absolute;
+  top: 3px;
 
   img {
     width: 210px;
@@ -24,9 +28,8 @@
 
 //removing the display-table from nav, to let logo overflow
 .x-navbar-wrap {
-  
   .x-navbar-inner {
-    min-height: 36px;
+      min-height: 60px;
   }
 
   .x-container:before,
@@ -92,94 +95,144 @@
 .x-header-landmark.x-container.max.width {
   // Breakpoint: middle-bear (Up to Portrait Tablet)
   @include break(mama-bear) {
-    margin-top: 65px;
+    margin-top: 60px;
   }
 }
 
-// NAV LINK COLOURS
-// =============================================================================
+// NAVIGATION COLOURS & OVERRIDES
+//=============================================================================
 #menu-main-nav {
   a:hover,
   ul.sub-menu a:hover,
   &.current-menu-item > a, 
   .current-menu-item  {
-    box-shadow: 0 6px 0 0 $turq;
+    box-shadow: none;
+    color: $turq;
   }
   a span:after {
+    color: $turq;
+  }  
+
+  li a:hover, 
+  .x-active > a {
+    box-shadow: none;
+  }
+
+  .current-menu-item a {
+    color: $grey-dark
+  }
+}
+
+// MOBILE NAV
+#menu-main-nav-1 {
+  span i, 
+  a:hover,
+  a:focus{
     color: $turq;
   }
 }
 
 
 // sign-up-form banner under nav
-// =============================================================================
+//=============================================================================
 .sign-up-form-wrapper {
-  @include clearfix;
   width: 100%;
+  padding: 0 5px;
   background: $turq;
-
-  .inner-sign-up-wrapper {
-    margin: 0 auto;
-    width: 94%;
-
-      // mobile
-        @include break(baby-bear) {
-          width: 100%;
-        }
-
-     h4 {
-      margin: 17px 1% 0 0;
-      color: $white;
-      float: left;
-      font-size: 20px;
-
-      // Breakpoint: Tablets and Below)
-      @include break(cubs) {
-        display: block;
-        text-align: center;
-        margin: 0 0 5px;
-        width: 100%;
-      }
-    }
+  @include break(cubs) {
+    padding-bottom: 8px;
   }
 
   .x-subscribe-form-9512 {
+    margin: 0;
+    ul.signup-inline {
+      list-style: none;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      font-size: 14px;
+      @include break(baby-bear) {
+        font-size: 11px;
+      }
+      
+      li {
+        display: inline-block;
+        text-transform: uppercase;
+        color: $white;
+        margin: 0;
+        line-height: 2.7;
+        // Breakpoint: Tablets and Below)
+        @include break(cubs) {
+          width: 32.7%;
+        }
+
+        &.callout-phrase {
+          @include break(cubs) {
+            display:block;
+            width: 100%;
+            @include break(baby-bear) {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+
+    input[type="hidden"] {
+      display: none;
+      width: 0;
+      height: 0;
+      font-size: 0;
+    }
+
     input[type="text"], 
     input[type="email"],
     input[type="submit"] {
       width: initial;
-      height: 35px;
+      height: 36px;
       margin: 0;
       font-size: 14px;
-
+      color: $white;
       // Breakpoint: Tablets and Below)
       @include break(cubs) {
         width: 100%;
-        padding: 0 3px;
       }
     }
 
-    fieldset {
-      margin: 10px 1% 10px 0;
-      float: left;
-      &:last-of-type {
-        margin-left: 0;
-      }
-
-      // Breakpoint: Tablets and Below)
-      @include break(cubs) {
-        width: 32.3%;
-        margin: 0 1% 10px 0;
+    input[type="text"], 
+    input[type="email"] {
+      border: 5px solid $turq;   
+      background:none;
+      background:transparent;
+      margin-right: 5px;
+      padding: 0 1em;
+      @include break(baby-bear) {
+        padding: 0 0.5em;
       }
     }
 
     .submit {
       text-shadow: none;
       line-height: 1;
+      padding: 0 20px;
       &:hover,
       &:focus,
       &:active {
         text-shadow: none;
+      }
+    }
+
+    input::-webkit-input-placeholder, 
+    textarea::-webkit-input-placeholder {
+      color: $white;
+      text-align: center;
+      vertical-align: middle;
+      text-transform: uppercase;
+      font-family: "Raleway","Helvetica Neue",Helvetica,sans-serif;
+      font-weight: 300;
+      @include break(baby-bear) {
+        font-size: 13px;
       }
     }
   }
