@@ -1,3 +1,4 @@
+
 // fixing the main nav height
 
 .x-child-theme-active {
@@ -23,6 +24,7 @@
 
   img {
     width: 210px;
+    vertical-align: initial;
   }
 }
 
@@ -119,7 +121,8 @@
   }
 
   .current-menu-item a {
-    color: $grey-dark
+    color: $grey-dark;
+    box-shadow: none;
   }
 }
 
@@ -168,9 +171,11 @@
         }
 
         &.callout-phrase {
+          margin-right: 5px;
           @include break(cubs) {
             display:block;
             width: 100%;
+            margin-right: 0;
             @include break(baby-bear) {
               font-size: 12px;
             }
@@ -190,10 +195,9 @@
     input[type="email"],
     input[type="submit"] {
       width: initial;
-      height: 36px;
       margin: 0;
       font-size: 14px;
-      color: $white;
+      border-radius: 0;
       // Breakpoint: Tablets and Below)
       @include break(cubs) {
         width: 100%;
@@ -202,13 +206,16 @@
 
     input[type="text"], 
     input[type="email"] {
-      border: 5px solid $turq;   
-      background:none;
-      background:transparent;
       margin-right: 5px;
       padding: 0 1em;
+        height: 28px;
+      color: $turq;
+      @include break(cubs) {
+       height: 36px;
+      }
       @include break(baby-bear) {
         padding: 0 0.5em;
+        height: 30px;
       }
     }
 
@@ -216,6 +223,10 @@
       text-shadow: none;
       line-height: 1;
       padding: 0 20px;
+      height: 36px;
+      @include break(baby-bear) {
+        height: 30px;
+      }
       &:hover,
       &:focus,
       &:active {
@@ -225,7 +236,7 @@
 
     input::-webkit-input-placeholder, 
     textarea::-webkit-input-placeholder {
-      color: $white;
+      color: $turq;
       text-align: center;
       vertical-align: middle;
       text-transform: uppercase;

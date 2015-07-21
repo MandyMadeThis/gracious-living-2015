@@ -1,22 +1,24 @@
-#sponsors-accordion {
-  .x-accordion-toggle {
-    background-color: $turq;
+.x-child-theme-active {
+  #sponsors-accordion {
+    .x-accordion-toggle {
+      background-color: $turq;
+    }
+
+    .x-accordion-inner {
+      overflow: hidden;
+    }
   }
 
-  .x-accordion-inner {
-    overflow: hidden;
-  }
-}
+  #about-callout {
+    .x-btn {
+      display: block;
+      background: $lime;
 
-#about-callout {
-  .x-btn {
-    display: block;
-    background: $lime;
-
-    &:hover,
-    &:focus,
-    &:active {
-      background: $lime-dark;
+      &:hover,
+      &:focus,
+      &:active {
+        background: $lime-dark;
+      }
     }
   }
 }

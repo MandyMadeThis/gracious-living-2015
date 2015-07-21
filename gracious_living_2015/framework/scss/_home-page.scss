@@ -1,67 +1,128 @@
-.home {
+.x-child-theme-active {
+  &.home {
+    .currently-in {
+      line-height: 0;
 
-  .currently-in {
-    line-height: 0;
-    .h4 {
-      margin-top: 1.15em
+      .h4 {
+        margin-top: 1.15em;
+      }
     }
-  }
 
-  .x-section .x-slide {
-    img {
-      margin-left: 0;
-      margin-right: 0;
-      width: 100%;
+    .x-section {
+      .x-slide {
+        img {
+          margin-left: 0;
+          margin-right: 0;
+          width: 100%;
+          max-width: 100%;
+          box-shadow: none;
+        }
+      }
+
+      .x-counter {
+        // Breakpoint: cubs (Tablets and Below)
+        @include break(cubs) {
+          margin: 25px 0;
+        }
+      }
+    }
+
+    .x-container.max.width.main {
       max-width: 100%;
     }
+
+    .x-container.width {
+      width: 100%;
+    }
+
+    .h-landmark.entry-title {
+      display: none;
+    }
+
+    .x-container > .offset {
+      margin: 0 auto;
+    }
+
+    .x-flexslider-shortcode-container {
+      margin-bottom: 0;
+    }
+
+    // This can be removed if you fix the child-theme CSS comment issue and fix the CSS weirdness that's happening on the flex slider
+    .x-section {
+      .flex-direction-nav a {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: 30px;
+        height: 30px;
+        margin-top: -17px;
+        font-size: 30px;
+        line-height: 30px;
+        text-align: center;
+        text-shadow: 0 2px 2px rgba(0, 0, 0, 0.325);
+        color: #fff;
+        opacity: 0.5;
+        -webkit-transition: opacity 0.3s ease;
+        transition: opacity 0.3s ease;
+        z-index: 10;
+        
+        &.flex-prev {
+          left: 1%;
+          background-color: transparent;
+          background-color: none;
+        }
+
+        &.flex-next {
+          right: 1%;
+          background-color: transparent;
+          background-color: none;
+        }
+      }
+    }
+    
+    //Overwriting the flex controls 
+    .x-section .flex-direction-nav a.flex-next {
+      left: initial;
+    }
+    
+
+    // .x-section .flex-control-nav {
+    //   top: initial;
+    //   bottom: -30px;
+
+    //   @include break(middle-bear) {
+    //     bottom: -23px;
+    //   }
+    // }
+ 
   }
 
-  .x-container.max.width.main {
-    max-width: 100%;
-  }
-
-  .x-container.width {
-    width: 100%;
-  }
-
-  .h-landmark.entry-title{display: none;}
-
-  .x-container>.offset {
-    margin: 0 auto;
-  }
-
-  .x-flexslider-shortcode-container {margin-bottom: 0;}
-  .x-section .flex-control-nav {
-    top: initial;
-    bottom: -30px;
-  }
-}
-
-#x-section-1 {
-  @include break(cubs) {
-    padding: 0 !important;
-  }
-  .x-container.max.width {
-    max-width: 100%;
-    width: 100%;
-    @include break(baby-bear) {
+  #x-section-1 {
+    @include break(cubs) {
       padding: 0 !important;
     }
+
+    .x-container.max.width {
+      max-width: 100%;
+      width: 100%;
+
+      @include break(baby-bear) {
+        padding: 0 !important;
+      }
+    }
   }
+  // Removing things from media pages
+  // =============================================================================
+  // .portfolio-category-media {
+  //   .p-meta {display: none;}
+  // }
+
+  // .portfolio-category-media {
+  //   .entry-content img {
+  //     box-shadow: none;
+  //     margin-top: 0;
+  //     margin-bottom: 0;
+  //   }
+  // }
 }
-
-
-// Removing things from media pages
-// =============================================================================
-// .portfolio-category-media {
-//   .p-meta {display: none;}
-// }
-
-// .portfolio-category-media {
-//   .entry-content img {
-//     box-shadow: none;
-//     margin-top: 0;
-//     margin-bottom: 0;
-//   }
-// }
-

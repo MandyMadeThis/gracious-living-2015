@@ -106,10 +106,22 @@
 
       &.alignleft {
         margin-right: 4%;
+        @include break(cubs) {
+          margin-right: 0;
+          display: block;
+          float: none;
+          clear: both;
+        }
       }
       
       &.alignright {
         margin-left: 4%;
+        @include break(cubs) {
+          margin-left: o;
+          display: block;
+          float: none;
+          clear: both;
+        }
       }
 
       &.aligncenter {
@@ -119,6 +131,20 @@
 
     }
   }
+
+  // Top Post Slider
+  //==========================================================================
+  .x-post-carousel.unstyled {
+    .entry-cover-author,
+    .entry-cover-date {
+      display: none;
+    }
+    .entry-cover:hover .x-post-carousel-meta {
+        margin-bottom: -100px;
+      }
+  }
+
+
 
   // Footer
   //==========================================================================
@@ -205,7 +231,8 @@
 
 // Media and Gallery Fixes
 // ============================================================================
-.gallery-item {
+.gallery-item,
+.wp-caption {
   border: none;
   border-radius: 0;
 }

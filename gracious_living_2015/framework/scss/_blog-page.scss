@@ -1,4 +1,6 @@
-.blog .x-main{
+.x-child-theme-active {
+
+&.blog .x-main {
   article:nth-of-type(odd) {
     .entry-featured {
       float: right;
@@ -22,12 +24,20 @@
   }  
 }
 
-.blog .x-main .hentry >.entry-featured, 
-.search .x-main .hentry>.entry-featured, 
-.archive .x-main .hentry>.entry-featured {
+&.blog .x-main .hentry >.entry-featured, 
+&.search .x-main .hentry>.entry-featured, 
+&.archive .x-main .hentry>.entry-featured {
   // Breakpoint: cubs (Tablets and Below)
   @include break(cubs) {
     max-width: 92%;
     margin: 0 auto 3em;
   }
+}
+
+//Not sure why there was a negative margin there? I removed it
+  &.page .x-main.full .hentry .entry-featured, 
+  &.single-post .x-main.full .hentry .entry-featured {
+    margin-top: 0;
+  }
+
 }

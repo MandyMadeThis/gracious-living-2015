@@ -40,12 +40,12 @@ function add_category_to_single($classes) {
 add_filter('body_class','add_category_to_single');
 
 //filter categories on blog index 
-// function blog_index_categories( $query ) {
-//  if ( $query->is_home() && $query->is_main_query() ) {
-//  $query->set( 'cat', '798, 435, 812, 795, 457, 439, 845');
-//  }
-// }
-// add_action( 'pre_get_posts', 'blog_index_categories' );
+function blog_index_categories( $query ) {
+ if ( $query->is_home() && $query->is_main_query() ) {
+ $query->set( 'cat', '798, 435, 812, 795, 457, 439, 845');
+ }
+}
+add_action( 'pre_get_posts', 'blog_index_categories' );
 
 // Add Events to RSS Feed
 function add_events_to_rss_feed( $args ) {
@@ -93,7 +93,6 @@ add_action( 'pre_get_posts', 'custom_teardown_tribe_order_filter', 60 );
 function custom_teardown_tribe_order_filter() {
  if ( is_feed() ) remove_filter( 'posts_orderby', array( 'Tribe__Events__Query', 'posts_orderby' ), 10, 2 );
 }
-
 
 //set a short excerpt length
 function custom_excerpt_length( $length ) {
