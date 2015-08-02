@@ -7,7 +7,18 @@ module.exports = function(grunt) {
         sass: {
             dest: {
                 options: {
-                    style: 'compressed'
+                    style: 'compressed',
+                    banner: '/*!\n' +
+                              ' * Theme Name: X\n' +
+                              ' * Theme URI: <%= pkg.url %> http://theme.co/x/\n' +
+                              ' * Description: An immensely powerful and endlessly customizable WordPress theme.\n' +
+                              ' * Author: Themeco with Customizations by Mandy Thomson\n' +
+                              ' * Author http://theme.co/ & http://mandymadethis.com/\n' +
+                              ' * Version: 4.0.3\n' +
+                              ' * License: GNU General Public License v2.0\n' +
+                              ' * License URI: http://www.gnu.org/licenses/gpl-2.0.html\n' +
+                              ' * Text Domain: __x__\n' +
+                              ' */\n'
                 },
                 files: {
                     'style.css': 'framework/scss/style.scss'

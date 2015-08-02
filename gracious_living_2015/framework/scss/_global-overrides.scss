@@ -29,6 +29,8 @@
     }
   }
   
+
+
   .h-landmark {
     float: right;
     color: $lime;
@@ -368,6 +370,10 @@ img.ajax-loader {
   &.x-child-theme-active {
     .x-container > .offset {
       margin-top: 80px;
+    }
+
+    li {
+      margin: 15px 0;
     }
   }
 
