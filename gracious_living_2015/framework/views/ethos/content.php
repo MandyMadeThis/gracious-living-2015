@@ -17,12 +17,7 @@ $is_index_featured_layout = get_post_meta( get_the_ID(), '_x_ethos_index_feature
         <div class="entry-featured">
           <?php x_ethos_featured_index(); ?>
         </div>
-
-          <?php elseif( is_single() && ($date >= 201506) ) : ?>
-            <div class="entry-featured">
-              <?php x_featured_image(); ?>
-            </div>
-
+        
         <?php endif; ?>
       
     <?php endif; ?>

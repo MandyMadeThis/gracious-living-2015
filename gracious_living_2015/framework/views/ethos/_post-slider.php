@@ -75,7 +75,7 @@ if ( $is_blog || $is_archive ) :
                 <a href="<?php the_permalink(); ?>">
                   <div class="cover">
                     <div class="middle">
-                      <span class="featured-meta"><?php echo x_ethos_post_categories(); ?> / <?php echo get_the_date( 'F j, Y' ); ?></span>
+                      <span class="featured-meta"><?php echo x_ethos_post_categories(); ?></span>
                       <h2 class="h-featured"><span><?php x_the_alternate_title(); ?></span></h2>
                       <span class="featured-view"><?php _e( 'View Post', '__x__' ); ?></span>
                     </div>
