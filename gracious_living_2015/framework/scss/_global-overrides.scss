@@ -1,5 +1,4 @@
 .x-child-theme-active {
-
   // Temp Fix for Shop Entry
   &.shop {
     .entry-header {
@@ -15,26 +14,41 @@
     }
   }
 
-  .x-post-carousel{
+  .x-post-carousel {
     @include break(baby-bear) {
       display: none;
     }
   }
 
-  .entry-content{
+  .entry-content {
     margin-top: 0;
+  }
 
-    li {
-        margin: 15px 0
+  article {
+    .entry-wrap {
+      .content {
+        li {
+          margin-bottom: 15px;
+        }
+
+        p {
+          margin: 0 0 2.15em;
+        }
+      }
     }
   }
-  
 
+  .getsocial.gs-inline-group {
+    margin: 30px 0;
+    clear: both;
+    padding: 30px 0;
+  }
 
   .h-landmark {
     float: right;
     color: $lime;
     font-size: 400%;
+
     // Breakpoint: cubs (Tablets and Below)
     @include break(cubs) {
       font-size: 330%;
@@ -47,7 +61,7 @@
 
   .x-header-landmark {
     @include break(baby-bear) {
-     padding: 1em 0;
+      padding: 1em 0;
     }
   }
 
@@ -72,13 +86,13 @@
 
     &.button-orange {
       background-color: $orange;
+
       &:hover,
       &:focus,
       &:active {
         background: $orange-dark;
       }
     }
-
   }
 
   //Image borders & spacing
@@ -111,7 +125,8 @@
       }
 
       &.alignleft {
-        margin-right: 4%;
+        margin-right: 50px;
+
         @include break(cubs) {
           margin-right: 0;
           display: block;
@@ -119,9 +134,10 @@
           clear: both;
         }
       }
-      
+
       &.alignright {
-        margin-left: 4%;
+        margin-left: 50px;
+
         @include break(cubs) {
           margin-left: o;
           display: block;
@@ -134,10 +150,8 @@
         margin-left: auto;
         margin-right: auto;
       }
-
     }
   }
-
   // Top Post Slider
   //==========================================================================
   .x-post-carousel.unstyled {
@@ -145,17 +159,15 @@
     .entry-cover-date {
       display: none;
     }
+
     .entry-cover:hover .x-post-carousel-meta {
-        margin-bottom: -100px;
-      }
+      margin-bottom: -100px;
+    }
   }
-
-
-
   // Footer
   //==========================================================================
   .x-colophon.top {
-    background:$grey;
+    background: $grey;
   }
 
   .x-colophon.bottom .x-colophon-content {
@@ -163,6 +175,20 @@
 
     a {
       color: $white;
+    }
+  }
+
+  // Home Page Overrides
+  //==========================================================================
+  &.home {
+    article {
+      .entry-wrap {
+        .content {
+          li {
+            margin-bottom: 0;
+          }
+        }
+      }
     }
   }
 }
@@ -173,59 +199,65 @@
   }
 }
 
-
 // Making headings more responsive and better sized for mobile
-  h1,
-  .h1 {
-    @include break(cubs) {
-      font-size: 330%;
-    }
-    @include break(baby-bear) {
-      font-size: 220%;
-    }   
+h1,
+.h1 {
+  @include break(cubs) {
+    font-size: 330%;
   }
 
-  h2,
-  .h2 {
-    @include break(cubs) {
-      font-size: 200%;
-    }
-    @include break(baby-bear) {
-      font-size: 180%;
-    } 
+  @include break(baby-bear) {
+    font-size: 220%;
+  }
+}
+
+h2,
+.h2 {
+  @include break(cubs) {
+    font-size: 200%;
   }
 
-  h3,
-  .h3 {
-    @include break(cubs) {
-      font-size: 180%;
-    }
-    @include break(baby-bear) {
-      font-size: 150%;
-    } 
+  @include break(baby-bear) {
+    font-size: 180%;
+  }
+}
+
+h3,
+.h3 {
+  @include break(cubs) {
+    font-size: 180%;
   }
 
-  h4,
-  .h4 {
-    @include break(cubs) {
-      font-size: 150%;
-    }
-    @include break(baby-bear) {
-      font-size: 125%;
-    } 
+  @include break(baby-bear) {
+    font-size: 150%;
+  }
+}
+
+h4,
+.h4 {
+  @include break(cubs) {
+    font-size: 150%;
   }
 
-  h5,
-  .h5 {
-    @include break(cubs) {
-      font-size: 125%;
-    }
-    @include break(baby-bear) {
-      font-size: 115%;
-    } 
+  @include break(baby-bear) {
+    font-size: 125%;
+  }
+}
+
+h5,
+.h5 {
+  @include break(cubs) {
+    font-size: 125%;
   }
 
-  p {margin-bottom: 0.5em;}
+  @include break(baby-bear) {
+    font-size: 115%;
+  }
+}
+
+p {
+  margin-bottom: 0.5em;
+}
 
 // SETTING DEFAULT COLOURS ON ALL PAGES LIME HEAD + TURQ LINKS, BUTTONS & ACCENTS
 // ============================================================================
@@ -258,6 +290,7 @@
       width: 100%;
       padding: 0;
       list-style-type: none;
+
       li {
         display: table-cell;
         width: 1%;
@@ -347,9 +380,7 @@ img.ajax-loader {
     font-weight: bold;
     font-size: 0.8em;
   }
-
 }
-
 
 // BLOG & BLOG CAT PAGES:
 //============================================================================
@@ -371,10 +402,6 @@ img.ajax-loader {
     .x-container > .offset {
       margin-top: 80px;
     }
-
-    li {
-      margin: 15px 0;
-    }
   }
 
   .x-container.max.width.main {
@@ -393,19 +420,16 @@ img.ajax-loader {
   }
 }
 
-
 // Remove the break tag under the get social plugin on pages that aren't displaying it
 //============================================================================
 
 .home,
 .blog,
 .page-id-17,
-.page-id-9503, 
+.page-id-9503,
 .tribe-events-map,
 .page-id-5197 {
   .getsocial + br {
     display: none;
   }
 }
-  
-

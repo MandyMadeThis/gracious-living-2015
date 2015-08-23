@@ -47,52 +47,6 @@ function blog_index_categories( $query ) {
 }
 add_action( 'pre_get_posts', 'blog_index_categories' );
 
-// Add Events to RSS Feed
-function add_events_to_rss_feed( $args ) {
-  if ( isset( $args['feed'] ) && !isset( $args['post_type'] ) )
-    $args['post_type'] = array('post', 'tribe_events');
-  return $args;
-}
- 
-add_filter( 'request', 'add_events_to_rss_feed' );
-
-
-// Add Tribe Event Namespace
-add_action( 'rss2_ns', 'events_rss2_namespace' );
- 
-function events_rss2_namespace() {
-    echo 'xmlns:ev="http://purl.org/rss/2.0/modules/event/"'."\n";
-}
- 
-// Add Event Dates to RSS Feed
-add_action('rss_item','tribe_rss_feed_add_eventdate');
-add_action('rss2_item','tribe_rss_feed_add_eventdate');
-add_action('commentsrss2_item','tribe_rss_feed_add_eventdate');
- 
-function tribe_rss_feed_add_eventdate() {
-  if ( ! tribe_is_event() ) return;
-  ?>
-  <ev:tribe_event_meta xmlns:ev="Event">
-  <?php if (tribe_get_start_date() !== tribe_get_end_date() ) { ?>
- 
-    <ev:startdate><?php echo tribe_get_start_date(); ?></ev:startdate>
-    <ev:enddate><?php echo tribe_get_end_date(); ?></ev:enddate>
- 
-  <?php } else { ?>
- 
-    <ev:startdate><?php echo tribe_get_start_date(); ?></ev:startdate>
- 
-  <?php } ?>
-  </ev:tribe_event_meta>
- 
-<?php }
-
-// Tell The Events Calendar not to interfere with the RSS post order when events are included.
-add_action( 'pre_get_posts', 'custom_teardown_tribe_order_filter', 60 );
- 
-function custom_teardown_tribe_order_filter() {
- if ( is_feed() ) remove_filter( 'posts_orderby', array( 'Tribe__Events__Query', 'posts_orderby' ), 10, 2 );
-}
 
 //set a short excerpt length
 function custom_excerpt_length( $length ) {
